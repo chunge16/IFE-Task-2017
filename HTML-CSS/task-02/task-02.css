@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+table{  width: 100%;  }
+thead{
+    background-color: #3e3c3c;
+    color: #fff;
+}
+tfoot{
+    background-color: #e8e8e8;
+    font-weight: bold;
+}
+label{
+    display: inline-block;
+    padding: 5px 20px;
+    width: 25%;
+    text-align: right;
+}
+textarea{
+    width: 40%;
+    height: 100px;
+}
+button{
+
+    margin: 20px auto;
+    padding: 5px 0;
+    display: block;
+    width: 90%;
+    background-color: darkseagreen;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*颜色*/
+.color-888{
+    color: #888;
+}
+.color-000{
+    color: #000;
+}
+.color-fff{
+    color: #fff;
+}
+
+/*字体大小*/
+.font-32{  font-size: 32px;  }
+.font-28{  font-size: 28px;  }
+.font-24{  font-size: 24px;  }
+.font-18{  font-size: 18px;  }
+
+
+
+
+
+
+.clearFloat:after{
+    display: block;
+    content: '';
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*head*/
+.head-warp{
+    position: relative;
+    padding: 15px 2.5%;
+    width: 95%;
+    background-color: #888;
+
+}
+.head-title{
+    float: left;
+    font-size: 32px;
+}
+.head-nav{
+    position: absolute;
+    margin: 0;
+    right: 2.5%;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+.head-nav > li{
+    float: left;
+    margin-left: 30px;
+    text-decoration: inherit;
+}
+
+.head-nav > li > a{
+    text-decoration: none;
+}
+.head-nav a{
+    text-decoration: underline;
+}
+
+
+.module{
+    margin: 30px auto;
+    padding: 20px 10px;
+    width: 95%;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 5px 5px 5px #888;
+}
+.module > p{
+    font-size: 16px;
+    line-height: 24px;
+    text-indent: 2em;
+}
+
+.aside-title{
+    padding-left: 10px;
+    border-left: 5px solid green;
+}
+
+.input-warp > p{
+    padding-left: 26.5%;
+    font-size: 14px;
+}
+.textarea-label{
+    position: relative;
+    top: -90px;
+}
+
+
+
+/*footer*/
+.footer{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #000;
+}
+.footer-content{
+    font-size: 14px;
+    text-align: center;
+}
+

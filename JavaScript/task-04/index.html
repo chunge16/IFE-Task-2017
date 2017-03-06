@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 04</title>
+    <style>
+        .control{
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        ul li{
+            display: inline-block;
+            margin-left: 4px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: red;
+            color: #fff;
+        }
+        button{
+            background-color: antiquewhite;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var par = document.querySelector('.queue');
+
+            //remove
+            function remove(par,obj) {
+                par.removeChild(obj);
+                alert(obj.innerHTML);
+            }
+
+            //left insert
+            document.querySelector('.leftInsert').onclick = function () {
+                var value = document.querySelector('#number').value,
+                    child = document.createElement('li'),
+                    firstChild = par.firstChild;
+                if(value){
+                    child.innerHTML = value;
+                    par.insertBefore(child,firstChild);
+                    document.querySelector('#number').value = '';
+                }
+                else {
+                    alert('请输入数字');
+                    document.querySelector('#number').value = '';
+                }
+
+
+            }
+
+            //right insert
+            document.querySelector('.rightInsert').onclick = function () {
+                var value = document.querySelector('#number').value,
+                    child = document.createElement('li');
+
+                if(value){
+                    child.innerHTML = value;
+                    par.appendChild(child);
+                    document.querySelector('#number').value = '';
+                }
+                else {
+                    alert('请输入数字');
+                    document.querySelector('#number').value = '';
+                }
+
+
+            }
+
+            //left remove
+            document.querySelector('.leftRemove').onclick = function () {
+                var leftChild = par.firstElementChild;
+                console.log(leftChild)
+                if(leftChild){
+                    remove(par,leftChild);
+                }
+                else {
+                    alert('别点了，删除不了啦');
+                }
+                
+            }
+
+            //right remove
+            document.querySelector('.rightRemove').onclick = function () {
+                var rightChild = par.lastElementChild;
+
+                if(rightChild){
+                    remove(par,rightChild);
+                }
+                else {
+                    alert('别点了，删除不了啦');
+                }
+            }
+
+            //select remove
+            par.addEventListener('click',function (e) {
+                console.log(e);
+                if(e.target.nodeName == 'LI'){
+                    remove(par,e.target);
+                }
+            })
+
+        }
+    </script>
+</head>
+<body>
+
+<div class="control">
+    <label for="number">请输入</label>
+    <input type="text" name="number" id="number">
+    <button class="leftInsert" type="button">左侧入</button>
+    <button class="rightInsert" type="button">右侧入</button>
+    <button class="leftRemove" type="button">左侧出</button>
+    <button class="rightRemove" type="button">右侧出</button>
+</div>
+<ul class="queue">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>
