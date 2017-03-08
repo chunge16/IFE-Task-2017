@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE HTML and CSS Task 04</title>
+    <style>
+        .box{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:50%;
+            left: 50%;
+            width: 400px;
+            height: 200px;
+            background-color: #eee;
+
+        }
+        .circle{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fc0;
+        }
+        .circle-top{
+            top:0;
+            left: 0;
+            border-bottom-right-radius: 100% 100%;
+        }
+        .circle-bottom{
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="circle circle-top"></div>
+    <div class="circle circle-bottom"></div>
+</div>
+</body>
+</html>
