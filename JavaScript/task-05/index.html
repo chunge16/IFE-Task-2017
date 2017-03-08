@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 05</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .control{
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 60px;
+            list-style-type: none;
+            text-align: center;
+        }
+        ul li{
+            margin: 0 2px;
+            width: 30px;
+            text-align: center;
+            background-color: red;
+            color: #fff;
+        }
+        button{
+            background-color: antiquewhite;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var par = document.querySelector('.queue');
+
+            //remove
+            function remove(par,obj) {
+                par.removeChild(obj);
+                alert(obj.innerHTML);
+            }
+
+            //限制输入
+            function limitImport(value) {
+
+                //10-100的数字
+                var re = /^(?:[1-9]\d|100)$/;
+                if(re.test(value)){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+
+            }
+
+            //随机10-100
+            function RandomNum() {
+                return Math.floor(Math.random()*(100-10+1)+10);
+            }
+
+            //冒泡算法
+            function Bubble(elements1,elements2) {
+                var temp = elements1.offsetHeight;
+                elements1.offsetHeight = elements2.offsetHeight;
+                elements1.style.height = elements2.offsetHeight + "px";
+                elements1.innerText = elements2.offsetHeight;
+                elements2.offsetHeight = temp;
+                elements2.style.height = temp + "px";
+                elements2.innerText = temp;
+
+            }
+
+
+
+
+            //left insert
+            document.querySelector('.leftInsert').onclick = function () {
+                var value = document.querySelector('#number').value,
+                    child = document.createElement('li'),
+                    firstChild = par.firstChild;
+
+                if(limitImport(value) && par.childElementCount <= 60){
+                    child.innerHTML = value;
+                    child.style.height = value + 'px';
+                    par.insertBefore(child,firstChild);
+                    document.querySelector('#number').value = '';
+                }
+                else if(!limitImport(value)){
+                    alert('请输入10-100的数字');
+                    document.querySelector('#number').value = '';
+                }
+                else if(par.childElementCount > 60){
+                    alert('队列元素最多为60个');
+                    document.querySelector('#number').value = '';
+
+                }
+
+
+            }
+
+            //right insert
+            document.querySelector('.rightInsert').onclick = function () {
+                var value = document.querySelector('#number').value,
+                    child = document.createElement('li');
+
+                if(limitImport(value) && par.childElementCount <= 60){
+                    child.innerHTML = value;
+                    child.style.height = value + 'px';
+                    par.appendChild(child);
+                    document.querySelector('#number').value = '';
+                }
+                else if(!limitImport(value)){
+                    alert('请输入10-100的数字');
+                    document.querySelector('#number').value = '';
+                }
+                else if(par.childElementCount > 60){
+                    alert('队列元素最多为60个');
+                    document.querySelector('#number').value = '';
+
+                }
+
+            }
+
+            //left remove
+            document.querySelector('.leftRemove').onclick = function () {
+                var leftChild = par.firstElementChild;
+                console.log(leftChild)
+                if(leftChild){
+                    remove(par,leftChild);
+                }
+                else {
+                    alert('别点了，删除不了啦');
+                }
+                
+            }
+
+            //right remove
+            document.querySelector('.rightRemove').onclick = function () {
+                var rightChild = par.lastElementChild;
+
+                if(rightChild){
+                    remove(par,rightChild);
+                }
+                else {
+                    alert('别点了，删除不了啦');
+                }
+            }
+
+            //select remove
+            par.addEventListener('click',function (e) {
+                console.log(e);
+                if(e.target.nodeName == 'LI'){
+                    remove(par,e.target);
+                }
+            })
+
+            //冒泡排序
+            document.querySelector('.sort').onclick = function () {
+                var arr = par.children,
+                    i = arr.length - 1,
+                    j = 0,
+                    timer = '';
+                if(arr.length > 0){
+                    timer = setInterval(function () {
+                        if(i < 1){
+                            clearInterval(timer);
+                        }
+                        //最外层循环
+                        
+                        if(i == j){
+                            --i;
+                            j = 0;
+                        }
+                        if(arr[j].offsetHeight > arr[j+1].offsetHeight){
+                            Bubble(arr[j],arr[j+1]);
+                        }
+                        ++j;
+                    },80)
+                }
+                else {
+                    alert('呵呵，数据都没有！！！');
+                }
+
+
+
+
+            }
+
+            //随机50
+            document.querySelector('.random').onclick = function () {
+                var child = null,
+                    value = 0;
+
+                par.innerHTML = '';
+                for(var i = 0; i < 50; i++){
+                    child = document.createElement('li');
+                    value = RandomNum();
+                    child.innerHTML = value;
+                    child.style.height = value + 'px';
+                    par.appendChild(child);
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+
+<div class="control">
+    <label for="number">请输入</label>
+    <input type="text" name="number" id="number">
+    <button class="leftInsert" type="button">左侧入</button>
+    <button class="rightInsert" type="button">右侧入</button>
+    <button class="leftRemove" type="button">左侧出</button>
+    <button class="rightRemove" type="button">右侧出</button>
+    <button class="sort" type="button">冒泡排序</button>
+    <button class="random" type="button">随机50</button>
+</div>
+<ul class="queue">
+</ul>
+</body>
+</html>
