@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+}
+table{  width: 100%;  }
+thead{
+    background-color: #3e3c3c;
+    color: #fff;
+}
+tfoot{
+    background-color: #e8e8e8;
+    font-weight: bold;
+}
+label{
+    display: inline-block;
+    padding: 5px 20px;
+    width: 31%;
+    text-align: right;
+}
+textarea{
+    width: 40%;
+    height: 100px;
+}
+button{
+
+    margin: 20px auto;
+    padding: 5px 0;
+    display: block;
+    width: 90%;
+    background-color: darkseagreen;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/*head*/
+.head-warp{
+    position: relative;
+    padding: 15px 2.5%;
+    width: 95%;
+    background-color: #888;
+
+}
+.head-title{
+    float: left;
+    font-size: 32px;
+}
+.head-nav{
+    position: absolute;
+    margin: 0;
+    right: 2.5%;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+.head-nav > li{
+    float: left;
+    margin-left: 30px;
+    text-decoration: inherit;
+}
+
+.head-nav > li > a{  text-decoration: none;  }
+.head-nav a{  text-decoration: underline;  }
+.list-mag{  margin-left: 30px;  }
+
+.main{
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+.main .main-left{
+    margin-right: 35%;
+    width: auto;
+}
+.main .main-right{
+    width: 30%;
+}
+
+.module{
+    margin: 30px auto;
+    padding: 20px 10px;
+    width: 95%;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 5px 5px 5px #888;
+}
+.module > p{
+    font-size: 16px;
+    line-height: 24px;
+    text-indent: 2em;
+}
+
+.aside-title{
+    padding-left: 10px;
+    border-left: 5px solid green;
+}
+
+.input-warp > p{
+    padding-left: 36%;
+    font-size: 14px;
+}
+.textarea-label{
+    position: relative;
+    top: -90px;
+}
+
+.photo-warp{  margin: 20px auto;  }
+.photo-box{
+    float: left;
+    margin: 15px;
+    padding: 15px;
+    width: 150px;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+/*footer*/
+.footer{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #000;
+}
+.footer-content{
+    font-size: 14px;
+    text-align: center;
+}
+

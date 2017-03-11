@@ -1,0 +1,52 @@
+/*
+公共样式
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+.clearFloat:after{
+    display: block;
+    content: '';
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.floatLeft{ float: left;}
+.floatRight{ float: right; }
+
+
+/**
+颜色
+**/
+.red { color: red; }
+
+.f60 { color: #f60; }
+
+.ff8600 { color: #ff8600; }
+
+.fff{ color: #fff;}
+
+/*颜色*/
+.color-888{
+    color: #888;
+}
+.color-000{
+    color: #000;
+}
+.color-fff{
+    color: #fff;
+}
+
+/*字体大小*/
+.font-32{  font-size: 32px;  }
+.font-28{  font-size: 28px;  }
+.font-24{  font-size: 24px;  }
+.font-18{  font-size: 18px;  }
+
+
