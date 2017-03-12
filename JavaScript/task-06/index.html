@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 06</title>
+    <script src="task-06.js"></script>
+    <style>
+        .control{
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        ul li{
+            display: inline-block;
+            margin-left: 4px;
+            width: auto;
+            min-width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: red;
+            color: #fff;
+        }
+        button{
+            background-color: antiquewhite;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+        .search-box{
+            margin: 20px 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="control">
+    <textarea rows="10" cols="50" name="textarea" id="number"></textarea>
+    <button class="leftInsert" type="button">左侧入</button>
+    <button class="rightInsert" type="button">右侧入</button>
+    <button class="leftRemove" type="button">左侧出</button>
+    <button class="rightRemove" type="button">右侧出</button>
+    <br>
+    <div class="search-box">
+        <input  class="search-key" type="search" name="search" pattern="/^\w$/" placeholder="请输入搜索词">
+        <button class="btn-search" type="button">查询</button>
+    </div>
+</div>
+<ul class="queue">
+    <li><b style="color: #000">2</b>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>
