@@ -18,11 +18,11 @@ window.onload =  function () {
 
     }
 
-    //
+    //手机号验证
     document.querySelector('.btn-Number').onclick = function () {
         let number = document.querySelector('#exampleInputNumber').value,
             hint = document.querySelector('.Number-hint'),
-            rePhone = /^1[3,4,5,7,8]\d{9}$/,
+            rePhone = /^1(3\d[0-8]|14[5,7,9][0-9]|5[0,2,3,5,6,7,8,9]\d|7\d{2}|18\d{2})\d{7}$/,
             result = verification(rePhone,number);
 
         if(result&&number){
@@ -41,10 +41,11 @@ window.onload =  function () {
 
     }
 
+    //相邻单词验证
     document.querySelector('.btn-Str').onclick = function () {
         let str = document.querySelector('#exampleInputStr').value,
             hint = document.querySelector('.Str-hint'),
-            reStr = /\b([A-Za-z]+)\b\W+\1\b/,
+            reStr = /\b([A-Za-z]+)\b\s+\1\b/,
             result = verification(reStr,str);
 
 
