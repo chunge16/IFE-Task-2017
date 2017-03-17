@@ -4,6 +4,7 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/RegExp/RegExp.js" />
+        <item url="file://$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js" />
         <item url="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/stickyRice/RegExp.js" />
       </sourceFilesUrls>
@@ -11,6 +12,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/RegExp/RegExp.js" />
+      <root url="file://$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js" />
       <root url="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/stickyRice/RegExp.js" />
     </CLASSES>
