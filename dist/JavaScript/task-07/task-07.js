@@ -5,6 +5,8 @@
 
 window.onload = function () {
 
+    var timer = null;
+
     //前序遍历
     function preOrderTranverse(node, arr) {
         if (node !== null) {
@@ -42,25 +44,28 @@ window.onload = function () {
     }
 
     //动画事件
-    function setAction(arr, i) {
-        var timer = setInterval(function () {
+    function setAction(arr) {
+        var i = 0;
+        timer = setInterval(function () {
             if (i > arr.length - 1) {
                 arr[arr.length - 1].style.backgroundColor = "#fff";
                 clearInterval(timer);
-                return;
             } else {
-                changeStyle(arr[i]);
+                if (i > 0) {
+                    arr[i - 1].style.backgroundColor = '#fff';
+                }
+                arr[i].style.backgroundColor = '#337ab7';
             }
-            ++i;
+            i++;
         }, 500);
     }
 
     //按钮事件
     function btnOK(root, fn) {
-        var i = 0,
-            arr = [];
+        var arr = [];
+        clearInterval(timer);
         fn(root, arr);
-        setAction(arr, i);
+        setAction(arr);
     }
 
     function init() {
@@ -70,15 +75,15 @@ window.onload = function () {
             postOrderBtn = document.querySelector('.btn-postOrder');
 
         preOrderBtn.onclick = function () {
-            btnOK(root, preOrderTranverse);
+            btnOK(root, preOrderTranverse, timer);
         };
 
         inOrderBtn.onclick = function () {
-            btnOK(root, inOrderTranverse);
+            btnOK(root, inOrderTranverse, timer);
         };
 
         postOrderBtn.onclick = function () {
-            btnOK(root, postOrderTranverse);
+            btnOK(root, postOrderTranverse, timer);
         };
     }
 
