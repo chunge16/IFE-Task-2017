@@ -49,12 +49,15 @@ window.onload = function () {
         timer = setInterval(function () {
             if (i > arr.length - 1) {
                 arr[arr.length - 1].style.backgroundColor = "#fff";
+                arr[arr.length - 1].style.transform = "scale(1)";
                 clearInterval(timer);
             } else {
                 if (i > 0) {
                     arr[i - 1].style.backgroundColor = '#fff';
+                    arr[i - 1].style.transform = "scale(1)";
                 }
                 arr[i].style.backgroundColor = '#337ab7';
+                arr[i].style.transform = "scale(1.1)";
             }
             i++;
         }, 500);
