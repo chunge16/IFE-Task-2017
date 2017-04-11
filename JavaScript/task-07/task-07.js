@@ -91,15 +91,15 @@ window.onload = function () {
 
 
         preOrderBtn.onclick = function () {
-            btnOK(root,preOrderTranverse,timer);
+            btnOK(root,preOrderTranverse);
         };
 
         inOrderBtn.onclick = function () {
-            btnOK(root,inOrderTranverse,timer);
+            btnOK(root,inOrderTranverse);
         };
         
         postOrderBtn.onclick = function () {
-            btnOK(root,postOrderTranverse,timer);
+            btnOK(root,postOrderTranverse);
         };
 
 
