@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 08</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="task-09.js"></script>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        /*button {*/
+            /*border:0;*/
+            /*box-shadow: 3px 3px 10px rgba(0,0,0,0.5);*/
+            /*padding: 5px;*/
+            /*margin:20px 5px;*/
+            /*cursor: pointer;*/
+            /*background-color: #fff;*/
+        /*}*/
+        button:active {
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        div {
+            float: left;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #000;
+            background-color: #fff;
+            color: #000;
+            transition: transform 1s ease-in-out;
+        }
+        .default{
+            background-color: #fff;
+            color: black;
+        }
+        .active {
+            background-color: blue;
+            color: #fff;
+        }
+        .found {
+            background-color: red;
+            color: #fff;
+        }
+        .form-group{
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<form class="form-inline">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="请输入">
+        <button type="button" class="btn btn-success btn-add">添加</button>
+        <button type="button" class="btn btn-danger btn-del">删除</button>
+    </div>
+</form>
+
+<section id="root">
+    <div >
+        Super
+        <div>
+            Cat
+            <div>
+                Apple
+                <div>Pear</div>
+                <div>Pig</div>
+                <div>Cola</div>
+                <div>Soccer</div>
+            </div>
+            <div>Phone</div>
+            <div>
+                <div>Book</div>
+                <div>School</div>
+            </div>
+        </div>
+        <div>
+            Note
+            <div>
+                Human
+                <div>Code</div>
+                <div>Operate</div>
+                <div>Man</div>
+            </div>
+            <div>
+                Program
+                <div>
+                    Bement
+                    <div>Cat</div>
+                </div>
+                <div>Glass</div>
+            </div>
+        </div>
+        <div>Fish</div>
+    </div>
+</section>
+</body>
+</html>
