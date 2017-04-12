@@ -33,13 +33,17 @@ window.onload = function () {
 
     //动画
     function setAction(arr, key, iskey) {
-        var i = 0;
+        var i = 0,
+            gotIt = true;
         timer = setInterval(function () {
             if (i > arr.length - 1) {
                 arr[arr.length - 1].className = "default";
                 arr[arr.length - 1].style.transform = "scale(1)";
                 clearInterval(timer);
                 lock = true;
+                if (iskey && gotIt) {
+                    alert('没有哦，亲！！！');
+                }
             } else {
                 if (i > 0) {
                     arr[i - 1].className = '#default';
@@ -48,10 +52,13 @@ window.onload = function () {
                 arr[i].className = 'active';
                 arr[i].style.transform = "scale(1.1)";
                 //搜索
+
                 if (iskey && arr[i].firstChild.nodeValue.replace(/(^\s*)|(\s*$)/g, "") === key) {
+                    //去字符串两边空格
                     arr[i].className = 'found';
                     clearInterval(timer);
                     lock = true;
+                    gotIt = false;
                 }
             }
             i++;
