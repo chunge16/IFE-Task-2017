@@ -41,7 +41,9 @@ window.onload = function () {
     function init() {
         var root = document.getElementById('root'),
             nodeArr = root.getElementsByTagName('div'),
-            node = null,
+
+        //选择的元素节点
+        node = null,
             btnAdd = document.getElementsByClassName('btn-add')[0],
             btnDel = document.getElementsByClassName('btn-del')[0];
 
@@ -49,18 +51,28 @@ window.onload = function () {
         console.log(nodeArr);
 
         root.addEventListener('click', function (e) {
-            console.log(e);
+            nodeArr = root.getElementsByTagName('div');
+            nodeArr = Array.from(nodeArr);
+            // console.log(e);
             node = e.target;
             nodeSelect(e.target, nodeArr);
         });
 
         btnDel.onclick = function () {
-            nodeDel(node);
+            if (!node) {
+                alert("请选择要删除的元素节点");
+            } else {
+                nodeDel(node);
+            }
         };
 
         btnAdd.onclick = function () {
             var text = document.getElementsByTagName('input')[0].value;
-            nodeAdd(text, node);
+            if (!node) {
+                alert("请选择要删除的元素节点");
+            } else {
+                nodeAdd(text, node);
+            }
         };
     }
 
