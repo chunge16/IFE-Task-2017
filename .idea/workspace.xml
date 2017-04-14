@@ -17,61 +17,43 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.446386">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/yaoyao/task-02/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="task-02.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/yaoyao/task-02/task-02.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="false" />
-                    <element signature="e#120#213#0" expanded="false" />
-                    <element signature="e#267#432#0" expanded="false" />
-                    <element signature="e#483#691#0" expanded="false" />
-                    <element signature="e#735#786#0" expanded="false" />
-                    <element signature="e#835#1088#0" expanded="false" />
-                    <element signature="e#1138#1365#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="task-01.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yaoyao/task-01/task-01.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
-                  <caret line="96" column="38" lean-forward="false" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="38" />
-                  <folding>
-                    <element signature="e#135#228#0" expanded="false" />
-                    <element signature="e#282#447#0" expanded="false" />
-                    <element signature="e#498#706#0" expanded="false" />
-                    <element signature="e#750#801#0" expanded="false" />
-                    <element signature="e#848#1101#0" expanded="false" />
-                    <element signature="e#1151#1378#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yaoyao/task-02/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task-02.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yaoyao/task-02/task-02.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+                <element signature="e#120#213#0" expanded="false" />
+                <element signature="e#733#784#0" expanded="false" />
+                <element signature="e#833#1086#0" expanded="false" />
+                <element signature="e#2886#2970#0" expanded="false" />
+                <element signature="e#3011#3094#0" expanded="false" />
+                <element signature="e#3136#3224#0" expanded="false" />
+                <element signature="e#3262#3346#0" expanded="false" />
+                <element signature="e#3384#3467#0" expanded="false" />
+                <element signature="e#3518#4520#0" expanded="false" />
+                <element signature="e#4560#5117#0" expanded="false" />
+                <element signature="e#5166#5962#0" expanded="false" />
+                <element signature="e#5999#6523#0" expanded="false" />
+                <marker date="1492141801000" expanded="false" signature="6560:7084" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -108,7 +90,6 @@
         <option value="$PROJECT_DIR$/HTML-CSS/task-10/task-10.css" />
         <option value="$PROJECT_DIR$/stickyRice/RegularExpression/index.html" />
         <option value="$PROJECT_DIR$/stickyRice/RegularExpression/RegExp.js" />
-        <option value="$PROJECT_DIR$/stickyRice/RegExp/index.html" />
         <option value="$PROJECT_DIR$/stickyRice/RegExp/RegExp.js" />
         <option value="$PROJECT_DIR$/stickyRice/stickyRice/RegExp.js" />
         <option value="$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js" />
@@ -120,6 +101,7 @@
         <option value="$PROJECT_DIR$/JavaScript/task-08/task-08.js" />
         <option value="$PROJECT_DIR$/JavaScript/task-09/index.html" />
         <option value="$PROJECT_DIR$/JavaScript/task-09/task-09.js" />
+        <option value="$PROJECT_DIR$/stickyRice/RegExp/index.html" />
         <option value="$PROJECT_DIR$/yaoyao/task-02/index.html" />
         <option value="$PROJECT_DIR$/yaoyao/task-02/task-02.js" />
       </list>
@@ -159,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,10 +190,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IFE-Task-2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IFE-Task-2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stickyRice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegExp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,12 +380,13 @@
       <workItem from="1492010341523" duration="5991000" />
       <workItem from="1492068438751" duration="691000" />
       <workItem from="1492074344606" duration="3418000" />
-      <workItem from="1492099341961" duration="4093000" />
+      <workItem from="1492099341961" duration="4248000" />
+      <workItem from="1492132105972" duration="8487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142999000" />
+    <option name="totallyTimeSpent" value="151641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,11 +401,11 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19777602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19777602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38012618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -637,13 +638,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stickyRice/stickyRice/RegExp.js" />
-    <entry file="file://$PROJECT_DIR$/stickyRice/RegExp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -674,17 +668,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -741,9 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,9 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="14" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,14 +749,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stickyRice/RegExp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="94" lean-forward="false" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yaoyao/task-01/task-01.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="96" column="38" lean-forward="false" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="38" />
+        <state relative-caret-position="289">
+          <caret line="71" column="75" lean-forward="false" selection-start-line="71" selection-start-column="69" selection-end-line="71" selection-end-column="75" />
           <folding>
             <element signature="e#135#228#0" expanded="false" />
             <element signature="e#282#447#0" expanded="false" />
@@ -776,30 +771,41 @@
             <element signature="e#750#801#0" expanded="false" />
             <element signature="e#848#1101#0" expanded="false" />
             <element signature="e#1151#1378#0" expanded="false" />
+            <element signature="e#1847#2230#0" expanded="false" />
+            <element signature="e#2270#2473#0" expanded="false" />
+            <element signature="e#2513#2718#0" expanded="false" />
+            <element signature="e#2736#2939#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yaoyao/task-02/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="339">
+          <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yaoyao/task-02/task-02.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+        <state relative-caret-position="429">
+          <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
             <element signature="e#120#213#0" expanded="false" />
-            <element signature="e#267#432#0" expanded="false" />
-            <element signature="e#483#691#0" expanded="false" />
-            <element signature="e#735#786#0" expanded="false" />
-            <element signature="e#835#1088#0" expanded="false" />
-            <element signature="e#1138#1365#0" expanded="false" />
+            <element signature="e#733#784#0" expanded="false" />
+            <element signature="e#833#1086#0" expanded="false" />
+            <element signature="e#2886#2970#0" expanded="false" />
+            <element signature="e#3011#3094#0" expanded="false" />
+            <element signature="e#3136#3224#0" expanded="false" />
+            <element signature="e#3262#3346#0" expanded="false" />
+            <element signature="e#3384#3467#0" expanded="false" />
+            <element signature="e#3518#4520#0" expanded="false" />
+            <element signature="e#4560#5117#0" expanded="false" />
+            <element signature="e#5166#5962#0" expanded="false" />
+            <element signature="e#5999#6523#0" expanded="false" />
+            <marker date="1492141801000" expanded="false" signature="6560:7084" ph="{...}" />
           </folding>
         </state>
       </provider>
