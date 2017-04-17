@@ -11,7 +11,8 @@
         .form-horizontal{
             margin-top: 100px;
         }
-        .hint{
+        .group .hint{
+            display: none;
             padding-top: 5px;
         }
     </style>
@@ -23,22 +24,22 @@
         <div class="col-sm-6">
             <input type="text" class="form-control" id="name" placeholder="请输入名称">
         </div>
-        <p class="col-sm-offset-4 col-sm-8 name-hint hint help-block"></p>
+        <p class="col-sm-offset-4 col-sm-8 name-hint hint help-block">字符长度4-16位</p>
     </div>
     <div class="form-group Password-group group">
         <label for="Password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
         <div class="col-sm-6">
             <input type="password" class="form-control" id="Password" placeholder="请输入密码">
         </div>
-        <p class="col-sm-offset-4 col-sm-8 Password-hint hint help-block"></p>
+        <p class="col-sm-offset-4 col-sm-8 Password-hint hint help-block">6位数字</p>
 
     </div>
     <div class="form-group Password2-group group">
-        <label for="Password2" class=" col-sm-offset-2 col-sm-2 control-label">确认密码</label>
+        <label for="rePassword" class=" col-sm-offset-2 col-sm-2 control-label">确认密码</label>
         <div class="col-sm-6">
-            <input type="password" class="form-control" id="Password2" placeholder="请再次输入密码">
+            <input type="password" class="form-control" id="rePassword" placeholder="请再次输入密码">
         </div>
-        <p class="col-sm-offset-4 col-sm-8 Password2-hint hint help-block"></p>
+        <p class="col-sm-offset-4 col-sm-8 rePasswordHint hint help-block">再次输入相同密码</p>
 
     </div>
     <div class="form-group email-group group">
@@ -46,7 +47,7 @@
         <div class="col-sm-6">
             <input type="email" class="form-control" id="email" placeholder="请输入邮箱">
         </div>
-        <p class="col-sm-offset-4 col-sm-8 email-hint hint help-block"></p>
+        <p class="col-sm-offset-4 col-sm-8 email-hint hint help-block">正确的邮箱格式</p>
 
     </div>
     <div class="form-group phone-group group">
@@ -54,7 +55,7 @@
         <div class="col-sm-6">
             <input type="number" class="form-control" id="phone" placeholder="请输入手机号">
         </div>
-        <p class="col-sm-offset-4 col-sm-8 phone-hint hint help-block"></p>
+        <p class="col-sm-offset-4 col-sm-8 phone-hint hint help-block">11位手机号码</p>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-4 col-sm-8">

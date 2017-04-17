@@ -86,35 +86,26 @@ window.onload = function () {
     }
 
     //获得焦点
-    function getFocus(e, text) {
+    function getFocus(e) {
         removeClass(e.parentElement, 'has-success');
         removeClass(e.parentElement, 'has-error');
-        if (e && text) {
-            e.innerText = text;
-        }
-    }
-    //失去焦点
-    function outFocus(e, test, isOK) {
-        if (isOK) {
-            verifyStyle(e.parentElement, false);
-            e.innerText = test;
-        } else {
-            verifyStyle(e.parentElement, true);
-            e.innerText = test;
+        if (e) {
+            e.parentElement.nextElementSibling.style.display = 'block';
         }
     }
 
     function init() {
         var name = document.getElementById('name'),
             Password = document.getElementById('Password'),
-            Password2 = document.getElementById('Password2'),
+            rePassword = document.getElementById('rePassword'),
             email = document.getElementById('email'),
             phone = document.getElementById('phone'),
-            form = document.querySelectorAll('.group');
+            form = document.querySelectorAll('.group'),
+            inputs = Array.from(document.querySelectorAll('.group input'));
 
         var nameHint = document.getElementsByClassName('name-hint')[0],
             PasswordHint = document.getElementsByClassName('Password-hint')[0],
-            Password2Hint = document.getElementsByClassName('Password2-hint')[0],
+            rePasswordHint = document.getElementsByClassName('rePasswordHint')[0],
             emailHint = document.getElementsByClassName('email-hint')[0],
             phoneHint = document.getElementsByClassName('phone-hint')[0],
             submit = document.getElementsByClassName('btn-submit')[0];
@@ -124,31 +115,11 @@ window.onload = function () {
             phoneRe = /^(13[0-9]|14[5|7]|15[0-9]|18[0-9])\d{8}$/;
 
         //获得焦点
-        name.onfocus = function () {
-            var text = '字符长度4-16位';
-            getFocus(nameHint, text);
-        };
-
-        Password.onfocus = function () {
-            var text = '6位数字';
-            getFocus(PasswordHint, text);
-        };
-
-        Password2.onfocus = function () {
-            var text = '再次输入相同密码';
-            getFocus(Password2Hint, text);
-        };
-
-        email.onfocus = function () {
-            var text = '正确的邮箱格式';
-
-            getFocus(emailHint, text);
-        };
-
-        phone.onfocus = function () {
-            var text = '11位手机号码';
-            getFocus(phoneHint, text);
-        };
+        inputs.forEach(function (val) {
+            val.onfocus = function () {
+                getFocus(val);
+            };
+        });
 
         //失去焦点
         name.onblur = function () {
@@ -191,22 +162,22 @@ window.onload = function () {
             }
         };
 
-        Password2.onblur = function () {
-            var value2 = Password2.value.trim(),
+        rePassword.onblur = function () {
+            var value2 = rePassword.value.trim(),
                 value = Password.value.trim();
 
             if (!value2) {
-                verifyStyle(Password2Hint.parentElement, false);
-                Password2Hint.innerText = '输入不能为空';
+                verifyStyle(rePasswordHint.parentElement, false);
+                rePasswordHint.innerText = '输入不能为空';
             } else if (!pwdRe.test(value2)) {
-                verifyStyle(Password2Hint.parentElement, false);
-                Password2Hint.innerText = '密码格式不对';
+                verifyStyle(rePasswordHint.parentElement, false);
+                rePasswordHint.innerText = '密码格式不对';
             } else if (value !== value2) {
-                verifyStyle(Password2Hint.parentElement, false);
-                Password2Hint.innerText = '密码输入不一致';
+                verifyStyle(rePasswordHint.parentElement, false);
+                rePasswordHint.innerText = '密码输入不一致';
             } else if (pwdRe.test(value2) && value === value2) {
-                verifyStyle(Password2Hint.parentElement, true);
-                Password2Hint.innerText = '密码输入一致';
+                verifyStyle(rePasswordHint.parentElement, true);
+                rePasswordHint.innerText = '密码输入一致';
             }
         };
 
@@ -240,20 +211,17 @@ window.onload = function () {
             }
         };
 
-        var isok = true;
-
         //submit
         submit.onclick = function () {
             var isok = true;
 
             name.onblur();
             Password.onblur();
-            Password2.onblur();
+            rePassword.onblur();
             email.onblur();
             phone.onblur();
 
             form = Array.from(form);
-
             form.forEach(function (val) {
                 if (hasClass(val, 'has-error')) {
                     isok = false;
