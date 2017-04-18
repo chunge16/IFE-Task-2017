@@ -10,6 +10,38 @@ window.onload = function () {
         BFindex = 0,//广度优先遍历自增标识符
         lock = true;
 
+    //  前序
+    function preOrder(node,arr) {
+        if(node){
+            arr.push(node);
+            var len = node.children.length;
+            for(var i=0; i<len; i++){
+                preOrder(node.children[i]);
+            }
+        }
+    }
+    //中序
+    function inOrder(node,arr) {
+        if(node){
+            var len = node.children.length;
+            inOrder(node.children[0]);
+            arr.push(node);
+            for(var i=1; i<len; i++){
+                inOrder(node.children[i]);
+            }
+        }
+    }
+    //后序
+    function postOrder(node,arr) {
+        if(node){
+            var len = node.children.length;
+            for(var i=0; i<len; i++){
+                postOrder(node.children[i]);
+            }
+            arr.push(node);
+        }
+    }
+
 
     //深度遍历
     function traverseDF(node,nodeArr) {
@@ -32,7 +64,6 @@ window.onload = function () {
 
         }
     }
-
 
     //动画
     function setAction(arr,key,iskey) {
