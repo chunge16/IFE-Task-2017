@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机好音乐</title>
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="build/flexible_css.js"></script>
+    <script src="build/flexible.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.16.1/axios.min.js"></script>
+    <script src="Random-music.js"></script>
+    <link rel="stylesheet" href="music.css">
+</head>
+<body>
+<main class="warp" id="fm">
+    <div class="fm-cover" @click="play">
+        <img :src="song.picture"  alt="暂无图片" :style="paused">
+        <!--遮蔽-->
+        <div class="fm-cover-shield" v-show="song.seen"></div>
+    </div>
+
+    <div class="fm-msg">
+        <audio id="audios"></audio>
+        <div class="fm-msg-title">{{ song.songName }}</div>
+        <div class="fm-msg-singer">{{ song.artist }}</div>
+    </div>
+
+    <div class="fm-controls">
+        <div class="fm-controls-top">
+            <img src="imgs/icon_%20lyric.png" alt="暂无图片" title="歌词">
+            <img src="imgs/icon_download.png" alt="暂无图片" title="下载">
+            <img src="imgs/icon_share.png " alt="暂无图片" title="分享">
+        </div>
+        <div class="fm-controls-bottom">
+            <img :src="loop.imgSrc" alt="暂无图片" title="循环" @click="songLoop">
+            <img src="imgs/icon_next.png" alt="暂无图片" title="下一首" @click="nextSong">
+            <img src="imgs/icon_love.png" alt="暂无图片" title="喜欢">
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+            <span class="sr-only">60% Complete</span>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+body {
+    position: relative;
+    background-color: rgba(250, 250, 250, 0.6);
+    cursor: default;
+    margin: 0;
+    padding: 0;
+}
+img{ max-width: 100%;}
+
+.warp{
+    position: relative;
+    padding-top: 25%;
+    width: 100%;
+    height:100vh;
+    box-sizing: border-box;
+}
+.fm-cover,.fm-cover-shield{
+    position: relative;
+    margin: 0 auto;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@-webkit-keyframes change
+{
+    from {-webkit-transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);}
+
+}
+
+
+.fm-cover > img{
+    display: block;
+    position: relative;
+    width: 100%;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -webkit-animation: change 6s linear infinite ;
+    animation: change 6s linear infinite;
+}
+.fm-cover-shield{
+    position: absolute;
+    top:0;
+    background: url("imgs/icon_play.png") no-repeat 50% 50% rgba(250,250,250,0.5);
+    background-size: 20% 20%;
+    z-index: 99;
+}
+
+.fm-msg{
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+
+}
+.fm-msg-title{
+    font-size: 20px;
+    line-height: 25px;
+    color: rgb(3, 3, 3);
+
+}
+.fm-msg-singer{
+    color: rgb(74, 74, 74);;
+    font-size: 16px;
+    line-height: 25px;
+
+}
+
+.fm-controls{
+    margin-top: 2rem;
+}
+
+
+
+
+
+.fm-controls img{
+    display: block;
+    max-width: 100%;
+}
+
+.fm-controls-top,.fm-controls-bottom{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.fm-controls-top{
+    padding: 0 2.5rem;
+}
+.fm-controls-top > img{
+    height: 25px;
+}
+.fm-controls-bottom{
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    border-top: 1px solid #e8e8e8;
+}
+.fm-controls-bottom >img{ height: 35px;}
