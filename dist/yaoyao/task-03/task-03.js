@@ -13,7 +13,7 @@ window.onload = function () {
         return option;
     }
 
-    function inint() {
+    function init() {
 
         var Students = document.querySelectorAll('input[type=radio]'),
             school = document.getElementsByClassName('select-school')[0],
@@ -66,6 +66,6 @@ window.onload = function () {
             }
         };
     }
-    inint();
+    init();
 };
 //# sourceMappingURL=task-03.js.map

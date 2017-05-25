@@ -17,6 +17,10 @@
 </head>
 <body>
 <main class="warp" id="fm">
+    <div class="fm-volume" @click="volumeChange($event)">
+        <div class="fm-volume_datum" ></div>
+        <div class="fm-volume_plan"></div>
+    </div>
     <div class="fm-cover" @click="play">
         <img :src="song.picture"  alt="暂无图片" :style="paused">
         <!--遮蔽-->
@@ -35,16 +39,17 @@
             <img src="imgs/icon_download.png" alt="暂无图片" title="下载">
             <img src="imgs/icon_share.png " alt="暂无图片" title="分享">
         </div>
+        <!--进度条-->
+        <div class="fm-controls_center" @click="barChange($event)">
+            <div class="fm-controls_datum" ></div>
+            <div class="fm-controls_plan"></div>
+            <div class="fm-controls_btn" @mousedown="btnDown($event)"></div>
+        </div>
+
         <div class="fm-controls-bottom">
             <img :src="loop.imgSrc" alt="暂无图片" title="循环" @click="songLoop">
             <img src="imgs/icon_next.png" alt="暂无图片" title="下一首" @click="nextSong">
             <img src="imgs/icon_love.png" alt="暂无图片" title="喜欢">
-        </div>
-    </div>
-
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span class="sr-only">60% Complete</span>
         </div>
     </div>
 

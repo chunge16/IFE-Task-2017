@@ -10,7 +10,7 @@ img{ max-width: 100%;}
 
 .warp{
     position: relative;
-    padding-top: 25%;
+    /*padding-top: 25%;*/
     width: 100%;
     height:100vh;
     box-sizing: border-box;
@@ -37,8 +37,8 @@ img{ max-width: 100%;}
     width: 100%;
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
-    -webkit-animation: change 6s linear infinite ;
-    animation: change 6s linear infinite;
+    -webkit-animation: change 10s linear infinite ;
+    animation: change 10s linear infinite;
 }
 .fm-cover-shield{
     position: absolute;
@@ -67,13 +67,7 @@ img{ max-width: 100%;}
 
 }
 
-.fm-controls{
-    margin-top: 2rem;
-}
-
-
-
-
+.fm-controls{  margin-top: 1rem;  }
 
 .fm-controls img{
     display: block;
@@ -95,8 +89,49 @@ img{ max-width: 100%;}
     height: 25px;
 }
 .fm-controls-bottom{
-    margin-top: 2rem;
+    /*margin-top: 0rem;*/
     padding: .5rem 1rem;
     border-top: 1px solid #e8e8e8;
 }
-.fm-controls-bottom >img{ height: 35px;}
+.fm-controls-bottom > img{ height: 35px;}
+.fm-controls_center,.fm-volume{
+    position: relative;
+    margin: 40px auto;
+    width: 90%;
+}
+.fm-volume{
+    width: 80%;
+    padding: 30px 0 30px 35px;
+    background: url("imgs/icon_ volume.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+.fm-controls_datum,.fm-volume_datum{
+    width: 100%;
+    height: 2px;
+    background-color: #888;
+}
+.fm-controls_plan,.fm-volume_plan{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: green;
+}
+.fm-volume_plan{
+    top:49%;
+    left: 35px;
+}
+.fm-controls_btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #000;
+
+}
+

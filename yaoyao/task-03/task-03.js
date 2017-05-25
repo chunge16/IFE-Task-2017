@@ -12,7 +12,7 @@ window.onload = function () {
     }
 
     
-    function inint() {
+    function init() {
 
         const Students = document.querySelectorAll('input[type=radio]'),
               school = document.getElementsByClassName('select-school')[0],
@@ -72,5 +72,5 @@ window.onload = function () {
 
 
     }
-    inint();
+    init();
 }
