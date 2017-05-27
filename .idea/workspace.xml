@@ -19,42 +19,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/index.html">
+        <entry file="file://$PROJECT_DIR$/stickyRice/suspend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="357">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="music.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/music.css">
+      <file leaf-file-name="suspend.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stickyRice/suspend/suspend.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="122" column="15" lean-forward="false" selection-start-line="122" selection-start-column="15" selection-end-line="122" selection-end-column="15" />
+            <state relative-caret-position="522">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Random-music.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/Random-music.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="203" column="8" lean-forward="false" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="8" />
-              <folding>
-                <element signature="e#1035#1839#0" expanded="false" />
-                <element signature="e#1903#2192#0" expanded="false" />
-                <element signature="e#2234#2878#0" expanded="false" />
-                <element signature="e#2925#3951#0" expanded="false" />
-                <element signature="e#3856#3931#0" expanded="false" />
-                <element signature="e#4016#4522#0" expanded="false" />
-                <element signature="e#4562#5068#0" expanded="false" />
-                <element signature="e#5135#5203#0" expanded="false" />
-                <element signature="e#5272#6101#0" expanded="false" />
-                <element signature="e#6177#6977#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,9 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -119,9 +98,11 @@
         <option value="$PROJECT_DIR$/JavaScript/task-08/task-08.js" />
         <option value="$PROJECT_DIR$/yaoyao/task-03/index.html" />
         <option value="$PROJECT_DIR$/yaoyao/task-03/task-03.js" />
-        <option value="$PROJECT_DIR$/stickyRice/MusicPlayer/music.css" />
         <option value="$PROJECT_DIR$/stickyRice/MusicPlayer/index.html" />
         <option value="$PROJECT_DIR$/stickyRice/MusicPlayer/Random-music.js" />
+        <option value="$PROJECT_DIR$/stickyRice/MusicPlayer/music.css" />
+        <option value="$PROJECT_DIR$/stickyRice/suspend/index.html" />
+        <option value="$PROJECT_DIR$/stickyRice/suspend/suspend.css" />
       </list>
     </option>
   </component>
@@ -176,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -202,6 +184,10 @@
               <option name="myItemId" value="stickyRice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suspend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -216,14 +202,9 @@
               <option name="myItemId" value="stickyRice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MusicPlayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,11 +222,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stickyRice/suspend/img" />
       <recent name="$PROJECT_DIR$/stickyRice/MusicPlayer/imgs" />
       <recent name="$PROJECT_DIR$/HTML-CSS/task-05" />
       <recent name="$PROJECT_DIR$/JavaScript/task-05" />
       <recent name="$PROJECT_DIR$/HTML-CSS/task-03/img" />
-      <recent name="$PROJECT_DIR$/HTML-CSS/task-01/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -411,12 +392,14 @@
       <workItem from="1495086865524" duration="1178000" />
       <workItem from="1495591450260" duration="8851000" />
       <workItem from="1495674039671" duration="9156000" />
-      <workItem from="1495691220710" duration="2351000" />
+      <workItem from="1495691220710" duration="4014000" />
+      <workItem from="1495763270954" duration="9961000" />
+      <workItem from="1495847831643" duration="12458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196736000" />
+    <option name="totallyTimeSpent" value="220818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,9 +412,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19777602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19777602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -465,16 +447,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HTML-CSS/task-03/img/Arsenal.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML-CSS/task-03/img/730e0cf3d7ca7bcb51b61371b8096b63f724a89b.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HTML-CSS/task-03/img/14ce36d3d539b6004946d8e9ef50352ac75cb7e0.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -557,13 +529,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js">
@@ -631,17 +603,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -677,13 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stickyRice/RegExp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="94" lean-forward="false" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -780,38 +745,47 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/music.css">
+    <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="122" column="15" lean-forward="false" selection-start-line="122" selection-start-column="15" selection-end-line="122" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="441">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/index.html">
+    <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/music.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stickyRice/MusicPlayer/Random-music.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="203" column="8" lean-forward="false" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="8" />
-          <folding>
-            <element signature="e#1035#1839#0" expanded="false" />
-            <element signature="e#1903#2192#0" expanded="false" />
-            <element signature="e#2234#2878#0" expanded="false" />
-            <element signature="e#2925#3951#0" expanded="false" />
-            <element signature="e#3856#3931#0" expanded="false" />
-            <element signature="e#4016#4522#0" expanded="false" />
-            <element signature="e#4562#5068#0" expanded="false" />
-            <element signature="e#5135#5203#0" expanded="false" />
-            <element signature="e#5272#6101#0" expanded="false" />
-            <element signature="e#6177#6977#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stickyRice/RegExp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stickyRice/suspend/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stickyRice/suspend/suspend.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

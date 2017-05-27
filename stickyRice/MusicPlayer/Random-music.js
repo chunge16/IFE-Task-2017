@@ -179,8 +179,6 @@ window.onload = function () {
                         scale = 0,
                         plan = document.querySelector('.fm-volume_plan');
 
-
-
                     if(num){
                         audios.volume = this.song.volume;
                         plan.style.width = length * 0.5 + 'px';
@@ -201,7 +199,7 @@ window.onload = function () {
 
             }
         });
-        
+
     }
     
     init();

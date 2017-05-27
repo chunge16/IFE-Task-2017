@@ -1,0 +1,108 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box-warp{
+    margin: 40px auto 0 auto;
+    position: relative;
+    width: 400px;
+    height: 300px;
+
+}
+.box-img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.box-background{
+    /*隐藏*/
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    z-index: 100;
+}
+
+.box-background__title{
+    margin-top: 40px;
+    background-image: linear-gradient(left,red,orange 25%,red 50%,orange 75%,red ); /*背景渐变色*/
+    background-image: -webkit-linear-gradient(left,red,orange 25%,red 50%,orange 75%,red); /*背景渐变色*/
+    transform: translateY(30px);
+    transition: transform 1s;
+}
+
+.box-background__btn{
+    font-size: 18px;
+    background-color: transparent;  /*按钮背景透明化*/
+    border: none;
+    background-image: linear-gradient(left,#147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96); /*背景渐变色*/
+    background-image: -webkit-linear-gradient(left,#147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96); /*背景渐变色*/
+    transform: translateY(30px);
+    transition: transform 1s;
+
+}
+.box-background__btn:hover{ cursor: pointer;}
+
+.box-background__title,.box-background__btn{
+    -webkit-text-fill-color: transparent; /*文字透明 color: transparent; 同样的效果*/
+    -webkit-background-clip: text; /*背景裁剪为文字 当前只有webkit内核浏览器支持*/
+    background-size: 200% 100%;
+    -webkit-background-size: 200% 100%;
+    animation:flowLight 3s linear infinite;
+    -webkit-animation: flowLight 3s linear infinite;
+}
+/*文字流光动画*/
+@keyframes flowLight
+{
+    0%   {background-position: 0 0;}
+    100% {background-position: -100% 0;}
+}
+
+.box-background::before{
+    position: absolute;
+    left: 50%;
+    top:0;
+    content: '';
+    border: 3px solid #ffcc00;
+    border-width: 3px 0;
+    width: 0;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 1s; /*过渡*/
+}
+
+.box-background::after{
+    position: absolute;
+    left: 0;
+    top:50%;
+    content: '';
+    border: 2px solid #ffcc00;
+    border-width: 0 2px;
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+.box-warp:hover .box-background{  opacity: 1;  }
+.box-warp:hover .box-background__title{  transform: translateY(0);  }
+.box-warp:hover .box-background__btn{ transform: translateY(0); }
+.box-warp:hover .box-img{  filter: blur(3px);  }
+.box-warp:hover .box-background::before{
+     left: 0;
+     width: 100%;
+ }
+.box-warp:hover .box-background::after{
+    top: 0;
+    height: 100%;
+}
