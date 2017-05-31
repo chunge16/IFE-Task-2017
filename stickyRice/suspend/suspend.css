@@ -12,9 +12,6 @@ body{
 
 }
 .box-img{
-    position: absolute;
-    top:0;
-    left:0;
     width: 100%;
     height: 100%;
 }
@@ -30,7 +27,6 @@ body{
     width: 300px;
     height: 200px;
     text-align: center;
-    z-index: 100;
 }
 
 .box-background__title{
@@ -42,24 +38,24 @@ body{
 }
 
 .box-background__btn{
+    position: relative;
+    z-index: 1;    /*position属性值是非static才有效，让其高于伪元素的堆叠层级，使其可以点击使用该元素*/
+    display: block;
     font-size: 18px;
-    background-color: transparent;  /*按钮背景透明化*/
-    border: none;
     background-image: linear-gradient(left,#147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96); /*背景渐变色*/
     background-image: -webkit-linear-gradient(left,#147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96); /*背景渐变色*/
     transform: translateY(30px);
     transition: transform 1s;
 
 }
-.box-background__btn:hover{ cursor: pointer;}
 
 .box-background__title,.box-background__btn{
     -webkit-text-fill-color: transparent; /*文字透明 color: transparent; 同样的效果*/
     -webkit-background-clip: text; /*背景裁剪为文字 当前只有webkit内核浏览器支持*/
     background-size: 200% 100%;
     -webkit-background-size: 200% 100%;
-    animation:flowLight 3s linear infinite;
-    -webkit-animation: flowLight 3s linear infinite;
+    animation: flowLight 2s linear infinite;
+    -webkit-animation: flowLight 2s linear infinite;
 }
 /*文字流光动画*/
 @keyframes flowLight
@@ -94,9 +90,9 @@ body{
     transition: all 1s;
 }
 
-.box-warp:hover .box-background{  opacity: 1;  }
+.box-warp:hover .box-background{  opacity: 1; }
 .box-warp:hover .box-background__title{  transform: translateY(0);  }
-.box-warp:hover .box-background__btn{ transform: translateY(0); }
+.box-warp:hover .box-background__btn{ transform: translateY(0);}
 .box-warp:hover .box-img{  filter: blur(3px);  }
 .box-warp:hover .box-background::before{
      left: 0;
@@ -106,3 +102,5 @@ body{
     top: 0;
     height: 100%;
 }
+
+

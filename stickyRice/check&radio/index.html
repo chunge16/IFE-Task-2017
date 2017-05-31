@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义checkbox， radio样式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <style>
+
+        .input-warp{
+            margin: 20px auto 0 auto;
+            width: 80%;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .input-warp input{display: none;}
+
+        .input-disguise__radio > label,.input-disguise__checkbox > label{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+        }
+
+        .input-disguise__radio > input:checked + label,.input-disguise__checkbox > input:checked + label{
+            position: relative;
+            border: 1px solid #d81e06;
+            font-weight: bold;
+        }
+
+        .input-disguise__radio > input:checked + label::after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            content: '';
+            text-align: center;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #d81e06;
+        }
+        .input-disguise__checkbox > input:checked + label::after{
+            position: absolute;
+            top:-2px;
+            left: 1px;
+            content: '\2714';
+            text-align: center;
+            color: #d81e06;
+            font-size: 12px;
+        }
+
+        /*雪碧图*/
+        .input-sprite__radio > label,.input-sprite__checkbox > label{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            /*-webkit-appearance: checkbox;*/
+            background: url(img/input-sprite.png) 12px 0 no-repeat;
+            background-size: 200% 100%;
+
+        }
+        .input-disguise__radio > label,.input-sprite__radio > label{ border-radius: 50%; }
+
+        .input-sprite__radio > input:checked + label{
+            background-position: 0 0;
+            width: 14px;
+            height: 14px;
+            border: none;
+        }
+        .input-sprite__checkbox > input:checked + label{
+            background-position: 100% 0;
+            width: 14px;
+            height: 14px;
+            border: none;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<main class="input-warp">
+    <div class="input-disguise">
+        <h3>伪元素实现</h3>
+        <div class="input-disguise__radio">
+            <span>男生</span>
+            <input type="radio" name="sex" value="man" id="radio-disguise-man" checked="checked">
+            <label for="radio-disguise-man"></label>
+            <span>女生</span>
+            <input type="radio" name="sex" value="woman" id="radio-disguise-woman">
+            <label for="radio-disguise-woman"></label>
+        </div>
+        <div class="input-disguise__checkbox">
+            <span>读书</span>
+            <input type="checkbox" id="disguise-checkbox-book">
+            <label for="disguise-checkbox-book"></label>
+            <span>画画</span>
+            <input type="checkbox" id="disguise-checkbox-drawing">
+            <label for="disguise-checkbox-drawing"></label>
+            <span>音乐</span>
+            <input type="checkbox" id="disguise-checkbox-music">
+            <label for="disguise-checkbox-music"></label>
+        </div>
+    </div>
+    <div class="input-bg">
+        <h3>背景图片实现</h3>
+        <div class="input-sprite__radio">
+            <span>男生</span>
+            <input type="radio" name="sex" value="man" id="radio-sprite-man" checked="checked">
+            <label for="radio-sprite-man"></label>
+            <span>女生</span>
+            <input type="radio" name="sex" value="woman" id="radio-sprite-woman">
+            <label for="radio-sprite-woman"></label>
+        </div>
+        <div class="input-sprite__checkbox">
+            <span>读书</span>
+            <input type="checkbox" id="sprite-checkbox-book">
+            <label for="sprite-checkbox-book"></label>
+            <span>画画</span>
+            <input type="checkbox" id="sprite-checkbox-drawing">
+            <label for="sprite-checkbox-drawing"></label>
+            <span>音乐</span>
+            <input type="checkbox" id="sprite-checkbox-music">
+            <label for="sprite-checkbox-music"></label>
+        </div>
+    </div>
+</main>
+</body>
+</html>
