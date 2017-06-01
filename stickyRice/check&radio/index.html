@@ -19,21 +19,29 @@
         }
         .input-warp input{display: none;}
 
-        .input-disguise__radio > label,.input-disguise__checkbox > label{
+        .input-disguise__radio > label,
+        .input-disguise__checkbox > label,
+        .input-disguise2__radio > input,
+        .input-disguise2__checkbox > input{
             display: inline-block;
             width: 12px;
             height: 12px;
             border: 1px solid #d9d9d9;
             border-radius: 2px;
+            box-sizing: content-box;
         }
 
-        .input-disguise__radio > input:checked + label,.input-disguise__checkbox > input:checked + label{
+        .input-disguise__radio > input:checked + label,
+        .input-disguise__checkbox > input:checked + label,
+        .input-disguise2__radio > input:checked,
+        .input-disguise2__checkbox > input:checked{
             position: relative;
             border: 1px solid #d81e06;
             font-weight: bold;
         }
 
-        .input-disguise__radio > input:checked + label::after{
+        .input-disguise__radio > input:checked + label::after,
+        .input-disguise2__radio > input:checked::after{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -45,7 +53,8 @@
             border-radius: 50%;
             background: #d81e06;
         }
-        .input-disguise__checkbox > input:checked + label::after{
+        .input-disguise__checkbox > input:checked + label::after,
+        .input-disguise2__checkbox > input:checked::after{
             position: absolute;
             top:-2px;
             left: 1px;
@@ -56,6 +65,9 @@
         }
 
         /*雪碧图*/
+        .input-disguise__radio > label,.input-sprite__radio > label,.input-disguise2__radio > input[type=radio]{ border-radius: 50%; }
+
+
         .input-sprite__radio > label,.input-sprite__checkbox > label{
             display: inline-block;
             width: 12px;
@@ -67,24 +79,28 @@
             background-size: 200% 100%;
 
         }
-        .input-disguise__radio > label,.input-sprite__radio > label{ border-radius: 50%; }
-
-        .input-sprite__radio > input:checked + label{
+        .input-sprite__radio > input[type=radio]:checked + label{
             background-position: 0 0;
             width: 14px;
             height: 14px;
             border: none;
         }
-        .input-sprite__checkbox > input:checked + label{
+        .input-sprite__checkbox > input[type=checkbox]:checked + label{
             background-position: 100% 0;
             width: 14px;
             height: 14px;
             border: none;
         }
 
-
-
-
+        /*-webkit-appearance*/
+        .input-disguise2__radio > input,.input-disguise2__checkbox > input{
+            position: relative;
+            margin: 0;
+            -webkit-appearance: none; /*隐藏默认表单样式*/
+            -moz-appearance: none;
+            appearance: none;
+            vertical-align: -1px; /*元素垂直对齐方式*/
+        }
 
 
 
@@ -118,10 +134,10 @@
         <h3>背景图片实现</h3>
         <div class="input-sprite__radio">
             <span>男生</span>
-            <input type="radio" name="sex" value="man" id="radio-sprite-man" checked="checked">
+            <input type="radio" name="sex-2" value="man" id="radio-sprite-man" checked="checked">
             <label for="radio-sprite-man"></label>
             <span>女生</span>
-            <input type="radio" name="sex" value="woman" id="radio-sprite-woman">
+            <input type="radio" name="sex-2" value="woman" id="radio-sprite-woman">
             <label for="radio-sprite-woman"></label>
         </div>
         <div class="input-sprite__checkbox">
@@ -134,6 +150,23 @@
             <span>音乐</span>
             <input type="checkbox" id="sprite-checkbox-music">
             <label for="sprite-checkbox-music"></label>
+        </div>
+    </div>
+    <div class="input-disguise2">
+        <h3>伪元素之 -webkit-appearance实现</h3>
+        <div class="input-disguise2__radio">
+            <label for="radio-disguise2-man">男生</label>
+            <input type="radio" name="sex3" value="man" id="radio-disguise2-man" checked="checked">
+            <label for="radio-disguise2-woman">女生</label>
+            <input type="radio" name="sex3" value="woman" id="radio-disguise2-woman">
+        </div>
+        <div class="input-disguise2__checkbox">
+            <label for="disguise2-checkbox-book">读书</label>
+            <input type="checkbox" id="disguise2-checkbox-book">
+            <label for="disguise2-checkbox-drawing">画画</label>
+            <input type="checkbox" id="disguise2-checkbox-drawing">
+            <label for="disguise2-checkbox-music">音乐</label>
+            <input type="checkbox" id="disguise2-checkbox-music">
         </div>
     </div>
 </main>
