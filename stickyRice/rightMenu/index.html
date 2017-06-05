@@ -66,8 +66,8 @@
     function myRightMenu(e) {
         //阻止DOM元素执行与事件关联的默认动作。
         e.preventDefault();
-        rightMenu.style = '';
-        console.log(e.clientTop);
+        rightMenu.removeAttribute("style");
+        console.log(rightMenu.style);
 
         //鼠标坐标
         let x = e.offsetX,
@@ -93,7 +93,7 @@
         }
 
         if(y + menuHeight > boxHeight){
-            rightMenu.style.bottom = 0 + "px";
+            rightMenu.style.top = boxHeight - menuHeight + "px";
         }
         else {
             rightMenu.style.top = y + 'px';
