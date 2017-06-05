@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>自定义网页右键菜单</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box-warp{
+            position: relative;
+            margin: 20px auto 0 auto;
+            width: 90%;
+            height: 300px;
+            border: 1px solid #888;
+            box-shadow: 1px 1px 10px #e8e8e8;
+        }
+
+        .box-menu{
+            position: absolute;
+            display: none;
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+            width: 200px;
+            box-sizing: border-box;
+            border: 1px solid #888;
+            border-radius: 10px;
+        }
+
+        .box-menu > li{
+            padding: 5px;
+            height: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .box-menu > li:hover{
+            background-color: dodgerblue;
+            color: #fff;
+        }
+        .box-menu > li:last-child{
+            border-bottom: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="box-warp">
+    <ul class="box-menu">
+        <li>复制</li>
+        <li>剪切</li>
+        <li>新建文件夹</li>
+        <li>删除</li>
+    </ul>
+</div>
+<script>
+    const box = document.querySelector('.box-warp'),
+        rightMenu = document.querySelector('.box-menu');
+
+    function myRightMenu(e) {
+        //阻止DOM元素的默认行为
+        e.preventDefault();
+
+        rightMenu.style = '';
+
+        //鼠标坐标
+        let x = e.offsetX,
+            y = e.offsetY;
+
+        rightMenu.style.display = 'block';
+
+        //菜单宽高
+        let menuWidth = rightMenu.offsetWidth,
+            menuHeight   = rightMenu.offsetHeight;
+
+        //容器宽高
+        let boxWidth = box.offsetWidth,
+            boxHeight = box.offsetHeight;
+
+
+
+        if(x + menuWidth > boxWidth){
+            rightMenu.style.right = boxWidth - x + 'px';
+        }
+        else {
+            rightMenu.style.left = x + 'px';
+        }
+
+        if(y + menuHeight > boxHeight){
+            rightMenu.style.bottom = 0 + "px";
+        }
+        else {
+            rightMenu.style.top = y + 'px';
+
+        }
+
+    }
+
+    box.addEventListener('contextmenu',myRightMenu);
+
+    window.addEventListener('click',function () {
+        rightMenu.style.display = 'none';
+    })
+
+    rightMenu.addEventListener('click',function (e) {
+        //阻止事件的传播（冒泡）
+        e.stopPropagation();
+        alert(e.target.textContent);
+    })
+
+    /***
+     *
+     * 1. 非自定义菜单区域时，隐藏自定义菜单？
+     * 2. 实现页面屏蔽右键菜单？
+     *
+     *
+     *
+     * **/
+
+</script>
+</body>
+</html>
