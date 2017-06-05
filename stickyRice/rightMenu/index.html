@@ -8,10 +8,13 @@
         body{
             margin: 0;
             padding: 0;
+            width: 100vw;
+            height: 100vh;
         }
         .box-warp{
             position: relative;
             margin: 20px auto 0 auto;
+            padding: 10px;
             width: 90%;
             height: 300px;
             border: 1px solid #888;
@@ -61,10 +64,10 @@
         rightMenu = document.querySelector('.box-menu');
 
     function myRightMenu(e) {
-        //阻止DOM元素的默认行为
+        //阻止DOM元素执行与事件关联的默认动作。
         e.preventDefault();
-
         rightMenu.style = '';
+        console.log(e.clientTop);
 
         //鼠标坐标
         let x = e.offsetX,
@@ -99,17 +102,22 @@
 
     }
 
+
+    //监听oncontextmenu事件,
     box.addEventListener('contextmenu',myRightMenu);
 
-    window.addEventListener('click',function () {
-        rightMenu.style.display = 'none';
-    })
-
+    //点击自定义菜单条目时，弹出菜单条目名称
     rightMenu.addEventListener('click',function (e) {
-        //阻止事件的传播（冒泡）
+        //阻止事件的传播（冒泡） 默认冒泡
         e.stopPropagation();
         alert(e.target.textContent);
     })
+
+    //非自定义菜单区域时，隐藏自定义菜单
+    document.body.addEventListener('click',function () {
+        rightMenu.style.display = 'none';
+    })
+
 
     /***
      *
