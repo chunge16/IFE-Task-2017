@@ -66,6 +66,8 @@
     function myRightMenu(e) {
         //阻止DOM元素执行与事件关联的默认动作。
         e.preventDefault();
+
+        //删除指定的属性
         rightMenu.removeAttribute("style");
         console.log(rightMenu.style);
 
