@@ -31,37 +31,40 @@
         }
         .Accordion  input{
             display: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
+
         }
         .Accordion-box__content{
-            display: none;
-            transition: all 2s;
-            -webkit-transition: all 2s; /* Safari */
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity .8s ;
+            -webkit-transition: opacity .8s; /* Safari */
         }
 
-        /*.Accordion-box  input[type=radio]:checked + div::after {*/
-            /*display: inline-block;*/
-            /*content: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. ";*/
-            /*padding: 15px;*/
-            /*border-top: 1px solid #ddd;*/
 
-        /*}*/
         .Accordion-box  input[type=radio]:checked + div {
-            display: block;
+
             padding: 15px;
+            opacity: 1;
+            height: auto;
             border-top: 1px solid #ddd;
-
-
         }
     </style>
+    <script>
+        /****
+         *
+         * 1. checked后如何添加动画呢？
+         * 2. height只有设置固定值，过渡才有效果.过渡对display属性无效
+         *
+         *
+         * ***/
+    </script>
 </head>
 <body>
 <article class="Accordion">
     <div class="Accordion-box">
         <label for="headingOne" class="panel">Collapsible Group Item #1</label>
-        <input type="radio" id="headingOne" name="Collapsible">
+        <input type="radio" id="headingOne" name="Collapsible" checked="checked">
         <div class="Accordion-box__content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
 
     </div>
@@ -71,8 +74,6 @@
         </label>
         <input type="radio" id="headingTwo" name="Collapsible">
         <div class="Accordion-box__content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-
-
     </div>
     <div class="Accordion-box">
         <label for="headingThree" class="panel">
