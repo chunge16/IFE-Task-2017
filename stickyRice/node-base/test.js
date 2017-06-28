@@ -8,7 +8,7 @@ var key = system.args[1],
     data = {};
 
 if (system.args.length === 1) {
-    console.log('请输入搜索词');
+    console.log('请输入搜索词  ');
 
 } else {
     page.open(url, function(status) {

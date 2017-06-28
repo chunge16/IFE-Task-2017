@@ -2,53 +2,83 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/markdown/markdown.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
-        <item url="file://$PROJECT_DIR$/dist/yaoyao/task-02/task-02.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
-        <item url="file://$PROJECT_DIR$/dist/JavaScript/task-09/task-09.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/combo.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/makegrid.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible.debug.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible_css.debug.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/makegrid.debug.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/Random-music.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/node-base/test.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.debug.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.debug.js" />
         <item url="file://$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.debug.js" />
-        <item url="file://$PROJECT_DIR$/dist/stickyRice/node-base/hello.js" />
         <item url="file://$PROJECT_DIR$/dist/JavaScript/task-07/task-07.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/yaoyao/task-03/task-03.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/RegExp/RegExp.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/yaoyao/task-02/task-02.js" />
         <item url="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js" />
         <item url="file://$PROJECT_DIR$/dist/stickyRice/stickyRice/RegExp.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/markdown/markdown.js" />
         <item url="file://$PROJECT_DIR$/dist/JavaScript/task-08/task-08.js" />
+        <item url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-07/task-07.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/markdown/markdown.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-08/task-08.js" />
+        <item url="file://$PROJECT_DIR$/dist/yaoyao/task-02/task-02.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-09/task-09.js" />
+        <item url="file://$PROJECT_DIR$/dist/JavaScript/task-09/task-09.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/Random-music.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.js" />
+        <item url="file://$PROJECT_DIR$/dist/stickyRice/node-base/hello.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/markdown/markdown.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
-      <root url="file://$PROJECT_DIR$/dist/yaoyao/task-02/task-02.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
-      <root url="file://$PROJECT_DIR$/dist/JavaScript/task-09/task-09.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/combo.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/makegrid.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible.debug.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/flexible_css.debug.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/build/makegrid.debug.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/Random-music.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/node-base/test.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.debug.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.debug.js" />
       <root url="file://$PROJECT_DIR$/dist/yaoyao/task-01/task-01.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.debug.js" />
-      <root url="file://$PROJECT_DIR$/dist/stickyRice/node-base/hello.js" />
       <root url="file://$PROJECT_DIR$/dist/JavaScript/task-07/task-07.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/yaoyao/task-03/task-03.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/RegExp/RegExp.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/yaoyao/task-02/task-02.js" />
       <root url="file://$PROJECT_DIR$/dist/JavaScript/task-06/task-06.js" />
       <root url="file://$PROJECT_DIR$/dist/stickyRice/stickyRice/RegExp.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/markdown/markdown.js" />
       <root url="file://$PROJECT_DIR$/dist/JavaScript/task-08/task-08.js" />
+      <root url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-07/task-07.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/RegularExpression/RegExp.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/markdown/markdown.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.debug.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-08/task-08.js" />
+      <root url="file://$PROJECT_DIR$/dist/yaoyao/task-02/task-02.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible_css.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/JavaScript/task-09/task-09.js" />
+      <root url="file://$PROJECT_DIR$/dist/JavaScript/task-09/task-09.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/stickyRice/MusicPlayer/Random-music.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/combo.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/makegrid.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/MusicPlayer/build/flexible.js" />
+      <root url="file://$PROJECT_DIR$/dist/stickyRice/node-base/hello.js" />
     </CLASSES>
     <SOURCES />
   </library>
