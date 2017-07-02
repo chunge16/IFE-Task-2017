@@ -5,6 +5,7 @@ var page = require('webpage').create(),
     fs = require('fs');
 
 var key = system.args[1],
+    device = system.args[2] || '',
     url = "https://www.baidu.com/s?wd=" + encodeURI(key),
     time = Date.now(),
     data = {};
@@ -13,14 +14,40 @@ if (system.args.length === 1) {
     console.log('请输入搜索词  ');
 
 } else {
+    //是否默认设备
+    if(system.args[2]){
+
+        var content = fs.read('device.json'),
+        content = JSON.parse(content);
+        var config = content[device];
+        console.log(config);
+
+        //设置用户代理
+        page.settings.userAgent = config.UA;
+        //该属性可用于设置可视窗口的大小
+        page.viewportSize = {
+            width: config.width,
+            height: config.height
+        };
+        //该属性可以设置页面的可视范围
+        page.clipRect = {
+            top: 0,
+            left: 0,
+            width: config.width,
+            height: config.height
+        };
+    }
+
     page.open(url, function (status) {
+        page.render(device + '.png', {format: 'png', quality: '100'});
         if (status !== "success") {
             time = Date.now() - time;
             data = {
                 code: 0,			// 返回状态码，1为成功，0为失败
                 msg: '抓取失败',	// 返回的信息
                 word: key,			// 抓取的关键字
-                time: time,			// 任务的时间
+                time: time,   // 任务的时间
+                device: device
             };
             data = JSON.stringify(data, null, 4);
             fs.write("task.json", data, 'w');
@@ -29,15 +56,16 @@ if (system.args.length === 1) {
             time = Date.now() - time;
             page.includeJs("https://code.jquery.com/jquery-3.1.1.min.js", function () {
 
-                data = page.evaluate(function (time, key) {
+                data = page.evaluate(function (time, key, device) {
                     var result = [];
-                    var total = $('.c-row.c-gap-top-small');
+                    var total = $('#results .result');
+
                     for (var i = 0, len = total.length; i < len; i++) {
                         var list = {};
-                        list.title = $(total[i]).prev().text() || '';		// 结果条目的标题
-                        list.info = $(total[i]).find('.c-span18.c-span-last').text() || '';		// 摘要
-                        list.link = $(total[i]).prev().find('a').attr('href') || '';		// 链接
-                        var pic = $(total[i]).find('.c-img.c-img6');					//缩略图地址
+                        list.title = $(total[i]).find('.c-title').text().trim();
+                        list.info = $(total[i]).find('.c-abstract').text();
+                        list.link = $(total[i]).find('.c-container a:first').attr('href');
+                        var pic = $(total[i]).find('.c-img img');
                         list.pic = (pic && pic.length) ? pic.attr('src') : '';
                         result.push(list);
                     }
@@ -47,10 +75,12 @@ if (system.args.length === 1) {
                         msg: '抓取成功',
                         word: key,
                         time: time,
+                        device: device,
                         dataList: result
+
                     }, null, 4);
 
-                }, time, key);
+                }, time, key, device);
                 console.log(data);
                 fs.write("task.json", data, 'w');
                 phantom.exit();
@@ -63,6 +93,8 @@ if (system.args.length === 1) {
 
 
 /****
- * 1. 元素集合转换为数组，无法编译进行
- * 2. 文件模块不明白
+ * 1. 抓取类名选择有问题，无法有效抓取
+ * 2. JSON.parse处理后的JSON对象无法打印
+ * 3 如何删除重名文件
+ *
  * *****/
