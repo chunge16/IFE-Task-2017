@@ -11,16 +11,17 @@ var key = system.args[1],
     data = {};
 
 if (system.args.length === 1) {
-    console.log('请输入搜索词  ');
+    console.log('请输入搜索词 ');
 
 } else {
     //是否默认设备
-    if(system.args[2]){
+    if(device){
 
         var content = fs.read('device.json'),
         content = JSON.parse(content);
-        var config = content[device];
-        console.log(config);
+        var config = content[device],
+            path = device + '.png';
+        console.log(path);
 
         //设置用户代理
         page.settings.userAgent = config.UA;
@@ -36,9 +37,19 @@ if (system.args.length === 1) {
             width: config.width,
             height: config.height
         };
+
+        //检查文件名是否重复，重复删除
+        if(fs.exists(path)){
+            fs.remove(path);
+            console.log(fs.exists(path));
+        }
+
+
     }
 
     page.open(url, function (status) {
+
+
         page.render(device + '.png', {format: 'png', quality: '100'});
         if (status !== "success") {
             time = Date.now() - time;
@@ -95,6 +106,6 @@ if (system.args.length === 1) {
 /****
  * 1. 抓取类名选择有问题，无法有效抓取
  * 2. JSON.parse处理后的JSON对象无法打印
- * 3 如何删除重名文件
+ * 3. 如何删除重名文件
  *
  * *****/
