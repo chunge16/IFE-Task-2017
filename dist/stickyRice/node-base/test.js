@@ -1,68 +1,69 @@
-"use strict";
-//system模块可以加载操作系统变量，system.args就是参数数组
+'use strict';
 
-var system = require('system'),
+var page = require('webpage').create(),
+    system = require('system'),
+    fs = require('fs');
 
-//webpage模块是PhantomJS的核心模块，用于网页操作
-webPage = require('webpage'),
-    page = webPage.create(),
-    key = system.args[1],
-    time = Date.now();
+var key = system.args[1],
+    url = "https://www.baidu.com/s?wd=" + encodeURI(key),
+    time = Date.now(),
+    data = {};
 
-//命令行没有给出参数
 if (system.args.length === 1) {
-    console.log('Try to pass some args when invoking this script!');
-    phantom.exit();
+    console.log('请输入搜索词  ');
 } else {
-    page.open('https://www.baidu.com/s?wd=' + encodeURIComponent(key) + '&rsv_spt=1&rsv_iqid=0xa6ce1e3700030359&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=10&rsv_sug1=11&rsv_sug7=100', function (status) {
-        var obj = {
-            code: 1, //返回状态码，1为成功，0为失败
-            msg: '抓取成功', //返回的信息
-            word: '示例关键字', //抓取的关键字
-            time: 2000, //任务的时间
-            dataList: [//抓取结果列表
-            {
-                title: 'xx', //结果条目的标题
-                info: '', //摘要
-                link: '', //链接
-                pic: '' //缩略图地址
-            }]
-        };
-
-        if (status !== 'success') {
+    page.open(url, function (status) {
+        if (status !== "success") {
             time = Date.now() - time;
-            obj = {
-                code: 0, //返回状态码，1为成功，0为失败
-                msg: '抓取失败', //返回的信息
-                word: key, //抓取的关键字
-                time: time, //任务的时间
-                dataList: []
-            };
-            console.log(JSON.stringify(obj));
+            data = {
+                code: 0, // 返回状态码，1为成功，0为失败
+                msg: '抓取失败', // 返回的信息
+                word: key, // 抓取的关键字
+                time: time };
+            data = JSON.stringify(data, null, 4);
+            fs.write("task.json", data, 'w');
             phantom.exit();
         } else {
             time = Date.now() - time;
-            console.log('Loading ' + key);
-            console.log('Loading time ' + time + ' msec');
+            page.includeJs("https://code.jquery.com/jquery-3.1.1.min.js", function () {
 
-            //加载外部脚步
-            page.includeJs("https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js", function () {
-                //evaluate方法用于打开网页以后，在页面中执行JavaScript代码
-                page.evaluate(function () {
+                data = page.evaluate(function (time, key) {
+                    var result = [];
+                    var total = $('.c-row.c-gap-top-small');
+                    for (var i = 0, len = total.length; i < len; i++) {
+                        var list = {};
+                        list.title = $(total[i]).prev().text() || ''; // 结果条目的标题
+                        list.info = $(total[i]).find('.c-span18.c-span-last').text() || ''; // 摘要
+                        list.link = $(total[i]).prev().find('a').attr('href') || ''; // 链接
+                        var pic = $(total[i]).find('.c-img.c-img6'); //缩略图地址
+                        list.pic = pic && pic.length ? pic.attr('src') : '';
+                        result.push(list);
+                    }
 
-                    Array.form($('.c-row.c-gap-top-small')).forEach(function (val, index) {
-                        var item = {};
-                        item.title = val.previousElementSibling.innerText;
-                        item.info = val.lastElementChild.innerText;
-                        item.link = val.previousElementSibling.firstElementChild.href;
-                        item.pic = val.firstElementChild.firstElementChild.firstElementChild.src;
-                        obj.dataList.push(item);
-                    });
-                });
-                console.log(JSON.stringify(obj));
+                    return JSON.stringify({
+                        code: 1,
+                        msg: '抓取成功',
+                        word: key,
+                        time: time,
+                        dataList: result
+                    }, null, 4);
+                }, time, key);
+                console.log(data);
+                fs.write("task.json", data, 'w');
+                /*
+                 *  使用write方法写文件的过程：
+                 *  1.将需要书写的数据书写到一个内存缓冲区；
+                 *  2.待缓冲区写满后再将该缓冲区中的内容写入到文件中
+                 *  3.重复执行1.2,直到数据全部写入文件为止
+                 */
                 phantom.exit();
             });
         }
     });
 }
+
+/****
+ * 1. 元素集合转换为数组，无法编译进行
+ * 2. 文件模块不明白
+ * *****/
 //# sourceMappingURL=test.js.map
