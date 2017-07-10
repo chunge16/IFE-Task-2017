@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var page = require('webpage').create(),
     system = require('system'),
@@ -50,12 +50,6 @@ if (system.args.length === 1) {
                 }, time, key);
                 console.log(data);
                 fs.write("task.json", data, 'w');
-                /*
-                 *  使用write方法写文件的过程：
-                 *  1.将需要书写的数据书写到一个内存缓冲区；
-                 *  2.待缓冲区写满后再将该缓冲区中的内容写入到文件中
-                 *  3.重复执行1.2,直到数据全部写入文件为止
-                 */
                 phantom.exit();
             });
         }

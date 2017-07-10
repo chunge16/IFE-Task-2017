@@ -1,3 +1,5 @@
+"use strict";
+
 var page = require('webpage').create(),
     system = require('system'),
     fs = require('fs');
@@ -11,7 +13,7 @@ if (system.args.length === 1) {
     console.log('请输入搜索词  ');
 
 } else {
-    page.open(url, function(status) {
+    page.open(url, function (status) {
         if (status !== "success") {
             time = Date.now() - time;
             data = {
@@ -25,9 +27,9 @@ if (system.args.length === 1) {
             phantom.exit();
         } else {
             time = Date.now() - time;
-            page.includeJs("https://code.jquery.com/jquery-3.1.1.min.js", function() {
+            page.includeJs("https://code.jquery.com/jquery-3.1.1.min.js", function () {
 
-                data = page.evaluate(function(time, key) {
+                data = page.evaluate(function (time, key) {
                     var result = [];
                     var total = $('.c-row.c-gap-top-small');
                     for (var i = 0, len = total.length; i < len; i++) {
@@ -51,12 +53,6 @@ if (system.args.length === 1) {
                 }, time, key);
                 console.log(data);
                 fs.write("task.json", data, 'w');
-                /*
-                 *  使用write方法写文件的过程：
-                 *  1.将需要书写的数据书写到一个内存缓冲区；
-                 *  2.待缓冲区写满后再将该缓冲区中的内容写入到文件中
-                 *  3.重复执行1.2,直到数据全部写入文件为止
-                 */
                 phantom.exit();
             });
         }
