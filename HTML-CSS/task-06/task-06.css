@@ -1,0 +1,169 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrap{
+    margin: 0 auto;
+    padding: 0 44px;
+    box-sizing: border-box;
+    width: 980px;
+    height: 1386px;
+}
+#news-head{
+    display: flex;
+    justify-content: space-between;
+
+    width: 892px;
+    border-bottom: 2px solid #938e8c;
+    align-items: flex-end;
+}
+#news-head .head-title{
+    position: relative;
+    width: 110px;
+    height: 61px;
+    /* style | variant | weight | size/line-height | family */
+    font:12px "SimHei";
+    background-color: #d45d5c;
+    color: #fff;
+}
+.head-title_text{
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+}
+.head-time{
+    font: 12px "SimHei";
+    color: #d45d5c;
+}
+/*主要内容
+
+ */
+
+#news-content{
+    padding: 34px 0 40px 0;
+}
+
+.content-hot{
+    display: flex;
+    justify-content: space-between;
+}
+.content-hot_img{
+    /*设置为0，项目不缩小，默认为1随比例缩小*/
+    flex-shrink: 0;
+    position: relative;
+    width: 641px;
+    height: 301px;
+    /* bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+    background: url('imgs/左上大图.png') center/cover no-repeat border-box padding-box;
+}
+.content-hot_img::before{
+    content: '';
+    display: block;
+    width: 191px;
+    height: 301px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(70,101,78,.5);
+}
+.content-hot_img::after{
+    content: '';
+    display: block;
+    width: 191px;
+    height: 301px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(228,182,182,.5);
+}
+
+.content-hot_title{
+    flex-shrink: 1;
+    /*铺满交叉轴长度*/
+    width: 203px;
+    height: 299px;
+    border-top: 2px solid #cc8091;
+}
+.content-hot_title > p,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.content-hot_title > h3{
+    margin: 0;
+    padding: 0;
+    /*小型大小写字母的字体*/
+    font: small-caps 24px "Microsoft YaHei";
+    color: #000;
+    line-height: 30px;
+    /*下划线*/
+    text-decoration: underline;
+}
+
+.content-hot_title > p{
+    font: 12px "KaiTi";
+    color: #676767;
+    line-height: 10px;
+}
+.content-hot_title .hot-title_num{
+    font: italic 116px "Microsoft YaHei";
+    text-decoration: underline;
+    color: #75b86b;
+}
+.content-hot_title > h5{
+    float: left;
+    font: 55px "Microsoft YaHei";
+    color: #cc8091;
+}
+.content-hot_title > div{
+    float: left;
+    position: relative;
+    top: 15px;
+}
+.content-hot_title  strong{
+    position: relative;
+    bottom: -10px;
+    display: block;
+    font: 21px "Microsoft YaHei";
+    color: #cc8091;
+}
+.content-hot_title  span{
+    font: 12px "Microsoft YaHei";
+    color: rgba(35, 24, 21, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /****
+    底部
+    ****/
+#news-footer{
+    width: 892px;
+    border-top: 1px solid #938e8c;
+}
+#news-footer::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.footer-copyright{
+    float: right;
+    font: 12px "SimHei";
+    color: #d45d5c;
+}
+
