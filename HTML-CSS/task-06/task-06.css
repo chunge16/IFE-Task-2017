@@ -80,6 +80,9 @@ html,body{
 }
 
 .content-hot_title{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
     flex-shrink: 1;
     /*铺满交叉轴长度*/
     width: 203px;
@@ -300,6 +303,7 @@ html,body{
     color: #72b16a;
 }
 .news-text{
+    position: relative;
     margin-top: 30px;
     width: 459px;
     height: 318px;
@@ -334,6 +338,9 @@ html,body{
 }
 
 .news-text_bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: flex;
     float: left;
     justify-content: space-around;
