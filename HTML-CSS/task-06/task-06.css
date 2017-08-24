@@ -213,14 +213,21 @@ html,body{
     overflow: hidden;
     text-align: justify;
 }
-.content-news_text > p > strong {
-    position: relative;
-    top: -13px;
-    height: 65px;
+/*.content-news_text > p > strong {*/
+    /*position: relative;*/
+    /*top: -13px;*/
+    /*height: 65px;*/
+    /*float: left;*/
+    /*font: 70px "Microsoft YaHei";*/
+    /*color: #f5e327;*/
+
+/*}*/
+.content-news_text > p::first-letter{
     float: left;
     font: 70px "Microsoft YaHei";
     color: #f5e327;
-
+    line-height: 70px;
+    margin-right: 5px;
 }
 .news-text{
     overflow: hidden;
@@ -239,6 +246,7 @@ html,body{
     top: -20px;
     height: 16px;
  }
+
 .news-text > p > strong:last-child{
     font: 72px "SimHei";
     float: right;
