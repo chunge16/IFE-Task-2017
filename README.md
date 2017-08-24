@@ -28,6 +28,8 @@ IFE 历史精选课程，跟着小薇一起零基础入门HTML/CSS，12个任务
 
 [任务五：零基础HTML及CSS编码（二）](http://chunge2016.online/IFE-Task-2017/HTML-CSS/task-05/)
 
+[任务六：通过HTML及CSS模拟报纸排版](http://chunge2016.online/IFE-Task-2017/HTML-CSS/task-06/)
+
 [任务十：Flexbox 布局练习](http://chunge2016.online/IFE-Task-2017/HTML-CSS/task-10/)
 
 ---
