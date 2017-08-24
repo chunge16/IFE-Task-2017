@@ -135,6 +135,227 @@ html,body{
     color: rgba(35, 24, 21, 0.4);
 }
 
+.content-newsList{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 40px;
+    width: 641px;
+}
+.content-newsList_title{
+    font: bold 16px "Microsoft YaHei";
+    text-decoration: underline;
+}
+.newsList-what{flex-basis: 30%}
+.newsList-when{ flex-basis: 30%;}
+.newsList-how{ flex-basis: 25%}
+
+.newsList-what > h4{ color: #418c59;}
+.newsList-when > h4{ color: #d2994f;}
+.newsList-how > h4{ color: #cc7680;}
+
+.newsList-what > p{
+    font: 12px "SimSun";
+    line-height: 16px;
+    color: #767777;
+}
+.newsList-when > p{
+    font: 12px "Microsoft YaHei";
+    line-height: 16px;
+    opacity: .7;
+    color: #231815;
+}
+.newsList-how > p{
+    font: 12px "Microsoft YaHei";
+    line-height: 16px;
+    opacity: .7;
+}
+.newsList-how_list{
+    padding-left: 0;
+    list-style-type: none;
+    font: 12px "Microsoft YaHei";
+}
+.newsList-how_list > li{
+    line-height: 16px;
+    opacity: .7;
+}
+.newsList-how_list > li > em{  color: #cd4a48;  }
+
+.content-news{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 75px;
+}
+.content-news_text{  width: 415px;  }
+
+.content-news_img{  width: 458px;  }
+
+.content-news_text > h2{
+    font: bold 42px "SimHei";
+    line-height: 40px;
+    color: #11456b;
+    /*增加或减少字符间的空白（字符间距）*/
+    letter-spacing: -3px;
+}
+.content-news_text > h2 > em{
+    font: italic bold 72px "SimHei";
+    color: #f5e327;
+}
+.content-news_text > h3 {
+    font: bold 33px "SimHei";
+    color: #11456b;
+    border-bottom: 2px solid #11456b;
+}
+.content-news_text > p{
+    font: 12px "SimSun";
+    line-height: 16px;
+    color: #767777;
+    overflow: hidden;
+    text-align: justify;
+}
+.content-news_text > p > strong {
+    position: relative;
+    top: -13px;
+    height: 65px;
+    float: left;
+    font: 70px "Microsoft YaHei";
+    color: #f5e327;
+
+}
+.news-text{
+    overflow: hidden;
+}
+.news-text > p{
+    float: right;
+    width: 180px;
+    font: italic 14px "SimHei";
+    line-height: 16px;
+}
+.news-text > p > strong:first-child{
+     font: 72px "SimHei";
+     float: left;
+    color: #d45d5c;
+    position: relative;
+    top: -20px;
+    height: 16px;
+ }
+.news-text > p > strong:last-child{
+    font: 72px "SimHei";
+    float: right;
+    color: #d45d5c;
+    position: relative;
+    left: -20px;
+    top: -10px;
+}
+.news-text_img{
+    margin: 10px 0 10px 10px;
+    max-width: 100%;
+    float: right;
+}
+
+.news-img{
+    position: relative;
+    width: 458px;
+    height: 275px;
+    background: url("imgs/配图二.png") center/cover no-repeat;
+}
+.news-img_title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 458px;
+    height: 61px;
+    line-height: 61px;
+    background-color: rgba(4, 0, 0,.4);
+
+}
+.news-img_title > p{
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font: 26px "Microsoft YaHei";
+    color: #fff;
+    height: 44px;
+    line-height: 44px;
+    margin-left: 40px;
+    padding-left: 5px;
+    border-left: 3px solid #72b16a;
+}
+.news-img_title > p > span{
+    display: inline-block;
+    font: italic 12px "Microsoft YaHei";
+    /*word-spacing对中文无效*/
+    margin-left: 5px;
+    letter-spacing: 5px;
+    color: #72b16a;
+}
+.news-text{
+    margin-top: 30px;
+    width: 459px;
+    height: 318px;
+    background-color: #eeedd6;
+
+}
+
+.news-text_list{
+    list-style-type: none;
+}
+.news-text_list > li{
+    font: 16px "SimSun";
+    text-align: left;
+    line-height: 40px;
+    color: #5a5b5b;
+    letter-spacing: 4px;
+}
+.news-text_list > li::before{
+    display: inline-block;
+    margin-right: 4px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #11456c;
+}
+.news-text_list > li > i{
+    font: italic 12px "SimSun";
+    text-align: right;
+    color: #5a5b5b;
+}
+
+.news-text_bg{
+    display: flex;
+    float: left;
+    justify-content: space-around;
+    align-items: center;
+    width: 260px;
+    height: 160px;
+    background-color: #cd4a48;
+    color: #fff;
+}
+.news-text_bg > span{
+    display: inline-block;
+    font: 110px "Microsoft YaHei";
+}
+.news-text_bg > div{
+    height: 86px;
+    padding-left: 4px;
+    border-left: 2px solid #fff;
+}
+.news-text_bg > div > h4{
+    font: italic 21px "SimHei";
+    line-height: 24px;
+}
+.news-text_bg > div > p{
+    margin: 0;
+    padding-top: 5px;
+    text-align: justify;
+    font: 12px "SimHei";
+    line-height: 12px;
+    color: #fff;
+}
 
 
 
@@ -149,9 +370,19 @@ html,body{
 
 
 
-    /****
-    底部
-    ****/
+
+
+
+
+
+
+
+
+
+
+/****
+底部
+****/
 #news-footer{
     width: 892px;
     border-top: 1px solid #938e8c;
