@@ -2,7 +2,23 @@
   "name": "test-project",
   "version": "1.0.0",
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0"
+    "autoprefixer": "^7.1.2",
+    "gulp-less": "^3.3.2",
+    "gulp-postcss": "^6.4.0",
+    "postcss-aspect-ratio-mini": "0.0.2",
+    "postcss-px-to-viewport": "0.0.3",
+    "postcss-write-svg": "^3.0.1"
+  },
+  "description": "test PostCSS gulp plugin",
+  "keywords": [
+    "gulpplugin",
+    "PostCSS",
+    "css"
+  ],
+  "author": "damo",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.0.0",
+    "gulp": "~3.8.10"
   }
 }

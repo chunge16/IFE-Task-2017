@@ -1,0 +1,244 @@
+@color-94d5da: #94d5da;
+@color-93d4d9: #93d4d9;
+
+body {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@svg square {
+@rect {
+  fill: var(--color, black);
+  width: 100%;
+  height: 100%;
+}
+}
+.example2 {
+  background: white svg(square param(--color #00b1ff));
+}
+
+
+/**
+head
+**/
+#head{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background-color: @color-93d4d9;
+  text-align: center;
+  .head-back{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+    white-space: pre;
+  }
+  .head-back > i{
+    position: relative;
+    top: 4px;
+  }
+  .head-title{
+    margin: 0 auto;
+    font-size: 30px;
+    color: #fff;
+    font-weight: normal;
+  }
+}
+.nav{
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
+  > li{
+    flex: 1;
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    line-height: 80px;
+    color: #808080;
+    font-size: 16px;
+  }
+  .border-bottom_color{
+    border-bottom-color: @color-94d5da;
+  }
+
+}
+
+.main{
+  .main-slider{
+    width: 100vw;
+    height: 400px;
+    > img{
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-labels{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 150px;
+    border-bottom: 2px solid #e8e8e8;
+    align-items: center;
+    text-align: center;
+    .main-label_item{
+      flex: 1;
+      padding-top: 10px;
+      > h3 {
+        margin: 10px auto;
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+      }
+      > div{ color: @color-94d5da;  }
+    }
+  }
+  .main-column{
+    display: flex;
+    padding: 20px 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-bottom: 2px solid #e8e8e8;
+    .column-one{
+      flex: 1;
+      text-align: center;
+    }
+    .column-one > i{ color: @color-93d4d9;  }
+    .column-one > h2{
+      font-size: 24px;
+      color: #000;
+    }
+    .column-one > h3{
+      font-size: 20px;
+      color: #888;
+    }
+    div:nth-child(2){
+      border-left: 2px solid #e8e8e8;
+      border-right: 2px solid #e8e8e8;
+    }
+  }
+  .main-module{
+    margin-top: 40px;
+    padding: 0 20px;
+    > h3{
+      margin: 0;
+      padding: 10px 0;
+      font-weight: normal;
+      font-size: 30px;
+      color: #666;
+      text-align: left;
+      border-bottom: 2px solid #e8e8e8;
+    }
+    > section{
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+      .module-imgs{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        justify-content: center;
+        > div {
+          border: 1px solid @color-94d5da;
+          color: @color-94d5da;
+        }
+      }
+      .module-copywriters{
+        margin-left: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-bottom: -20px;
+        > p{
+          margin: 0;
+          margin-bottom: 20px;
+          flex-basis: 45%;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          background-color: #f8f8f8;
+        }
+      }
+    }
+  }
+
+  .main-article{
+    .article-list{
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      > li{
+        display: flex;
+        padding: 20px 40px;
+        border-bottom: 2px solid #e8e8e8;
+        div:first-child{
+          flex-grow: 1;
+          text-align: center;
+        }
+        .article-content{
+          margin-left: 40px;
+          flex-grow: 3;
+          display: flex;
+          flex-flow: row wrap;
+          align-content: space-between;
+          > h3{
+            margin-top: 0;
+            flex-basis: 100%;
+            font-size: 30px;
+            font-weight: normal;
+          }
+          > time{
+            font-size: 18px;
+            flex-basis: 100%;
+            color: #e9e9e9;
+          }
+        }
+      }
+    }
+    .article-hit{
+      padding: 20px 40px;
+      overflow: hidden;
+      > h3{
+        font-size: 30px;
+        margin-top: 0;
+      }
+      .article-hit_imgs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > i{
+          flex-basis: 30%;
+          color: @color-94d5da;
+          text-align: center;
+          border: 1px solid @color-94d5da;
+        }
+      }
+
+      > time{
+        padding-top: 20px;
+        display: block;
+        clear: left;
+        font-size: 18px;
+        color: #e9e9e9;
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+

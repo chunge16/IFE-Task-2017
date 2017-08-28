@@ -2,10 +2,12 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/gulpfile.js" />
         <item url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/gulpfile.js" />
       <root url="file://$PROJECT_DIR$/dist/yaoyao/task-03/task-03.js" />
     </CLASSES>
     <SOURCES />
