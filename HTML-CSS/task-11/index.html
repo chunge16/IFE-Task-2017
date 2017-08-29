@@ -138,6 +138,22 @@
     </article>
 
 </main>
+<script>
+    var arr = [2,3,4,[2,3,[2,3,4,2],5],3,5,[2,3,[2,3,4,2],2],4,3,6,2];
+    var unique = function(arr){
+        // 待实现方法体
+        var newArr = [];
+        for(let i = 0; i < arr.length;i++){
+            if(Array.isArray(arr[i])){
+                arguments.callee(arr[i])
+            }
+            else {
+                newArr.concat(arr[i]);
+            }
+        }
 
+        return newArr;
+    }
+</script>
 </body>
 </html>
