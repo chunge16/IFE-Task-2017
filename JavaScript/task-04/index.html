@@ -30,7 +30,14 @@
     </style>
     <script>
         window.onload = function () {
-            var par = document.querySelector('.queue');
+            const par = document.querySelector('.queue'),
+                value = document.querySelector('#number');
+
+            const leftInsert = document.querySelector('.leftInsert'),
+                rightInsert = document.querySelector('.rightInsert'),
+                leftRemove = document.querySelector('.leftRemove'),
+                rightRemove = document.querySelector('.rightRemove');
+
 
             //remove
             function remove(par,obj) {
@@ -38,71 +45,106 @@
                 alert(obj.innerHTML);
             }
 
-            //left insert
-            document.querySelector('.leftInsert').onclick = function () {
-                var value = document.querySelector('#number').value,
-                    child = document.createElement('li'),
+            // 输入的合法性
+            function check(content) {
+                let re = /\d+/g;
+                // 是否为空
+                if(!content === undefined){
+                    return false;
+                }
+                // 不能为无意义字符串
+                if(!content.trim()){
+                    return false;
+                }
+                // 必须为数字
+                if(!re.test(content)){
+                    return false;
+                }
+
+                return true;
+            }
+
+            // 创建元素
+            function createEl(element) {
+                if(!element){
+                    return null;
+                }
+
+                let el = document.createElement(element);
+                return el;
+
+            }
+
+            // insert
+            function insert(around) {
+                // 判断是否是数字
+                if(!check(value.value)){
+                    alert('请输入数字');
+                    value.value = '';
+                    value.focus();
+                    return;
+                }
+
+                let child = createEl('li'),
                     firstChild = par.firstChild;
-                if(value){
-                    child.innerHTML = value;
-                    par.insertBefore(child,firstChild);
-                    document.querySelector('#number').value = '';
+
+                if(value.value){
+                    child.innerHTML = value.value;
+                    //left insert
+                    if(around === 'left'){
+                        par.insertBefore(child,firstChild);
+                    }
+                    //right insert
+                    else if(around === 'right'){
+                        par.appendChild(child);
+                    }
                 }
                 else {
-                    alert('请输入数字');
-                    document.querySelector('#number').value = '';
+                    alert('输入不能为空');
                 }
+                // 清空输入框
+                value.value = '';
 
+            }
 
+            //left insert
+            leftInsert.onclick = function () {
+                insert('left');
             }
 
             //right insert
-            document.querySelector('.rightInsert').onclick = function () {
-                var value = document.querySelector('#number').value,
-                    child = document.createElement('li');
-
-                if(value){
-                    child.innerHTML = value;
-                    par.appendChild(child);
-                    document.querySelector('#number').value = '';
-                }
-                else {
-                    alert('请输入数字');
-                    document.querySelector('#number').value = '';
-                }
-
-
+            rightInsert.onclick = function () {
+                insert('right');
             }
 
             //left remove
-            document.querySelector('.leftRemove').onclick = function () {
+            leftRemove.onclick = function () {
                 var leftChild = par.firstElementChild;
-                console.log(leftChild)
                 if(leftChild){
                     remove(par,leftChild);
                 }
                 else {
                     alert('别点了，删除不了啦');
+                    return
                 }
                 
             }
 
             //right remove
-            document.querySelector('.rightRemove').onclick = function () {
+            rightRemove.onclick = function () {
                 var rightChild = par.lastElementChild;
-
                 if(rightChild){
                     remove(par,rightChild);
                 }
                 else {
                     alert('别点了，删除不了啦');
+                    return
                 }
             }
 
             //select remove
             par.addEventListener('click',function (e) {
-                console.log(e);
-                if(e.target.nodeName == 'LI'){
+                if(e.target.nodeName === 'LI'){
                     remove(par,e.target);
                 }
             })
