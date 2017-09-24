@@ -5,9 +5,11 @@
 
 window.onload = function () {
     var par = document.querySelector('.queue'),
-        newArr = [];
+        newArr = [],
+        text = document.querySelector('#number');
 
-    //remove
+
+        //remove
     function remove(par,obj) {
         par.removeChild(obj);
         alert(obj.innerHTML);
@@ -20,58 +22,58 @@ window.onload = function () {
             return [];
         }
 
-        let arr = [],
-            re = /\W+/;
-        arr = str.split(re);
+        const re = /\W+/g;
+        let arr = str.split(re).filter(item => {
+            return !!item
+        });
 
         return arr;
     }
+  
+    //检查输入合法性
+    function check(value) {
+        if(!value.trim()){
+            return false
+        }
+        return true
+    }
+    
+    //创建元素
+    function createItem(value) {
+        let child = document.createElement('li');
+        child.innerHTML = value;
 
-    //apply list
-    function applyList(arr,obj) {
-        let child = null;
-        obj.innerHTML = '';
+        return child;
+    }
 
-        arr.forEach(function (val) {
-            if(val){
-                child = document.createElement('li');
-                child.innerHTML = val;
-                obj.appendChild(child);
-            }
+    // 清空元素和聚焦
 
-        })
+    function reset (input) {
+        input.value = '';
+        input.focus()
     }
 
 
     //left insert
     document.querySelector('.leftInsert').onclick = function () {
-        let value = document.querySelector('#number').value,
-            child = document.createElement('li'),
-            firstChild = par.firstElementChild;
+        const value = text.value,
+            arr = getTextarea(value);
 
-            newArr = getTextarea(value);
-
-        par.innerHTML = '';
-
-        if(newArr){
-            newArr.forEach(function (val,index,arr) {
-                if(val){
-                    child = document.createElement('li');
+        if(check(value)){
+            arr.forEach((item,index,arr) => {
+                let child = createItem(arr[arr.length - index - 1]),
                     firstChild = par.firstElementChild;
-                    child.innerHTML = arr[arr.length - index - 1];
-                    if(!firstChild){
-                        par.appendChild(child);
-                    }else {
-                        par.insertBefore(child,firstChild);
-                    }
+                if(firstChild){
+                    par.insertBefore(child,firstChild);
+                }
+                else {
+                    par.appendChild(child);
                 }
 
             })
-            document.querySelector('#number').value = '';
-        }else {
-            alert('内容不能为空');
-
         }
+        reset(text);
+
     }
 
     //right insert
@@ -128,7 +130,7 @@ window.onload = function () {
     //select remove
     par.addEventListener('click',function (e) {
         console.log(e);
-        if(e.target.nodeName == 'LI'){
+        if(e.target.nodeName === 'LI'){
             remove(par,e.target);
         }
     })
@@ -137,26 +139,28 @@ window.onload = function () {
     document.querySelector('.btn-search').onclick = function () {
         let key = document.querySelector('.search-key').value,
             arr = newArr,
-            value = '';
+            children = Array.from(par.children);
+
+        if(!key){
+            alert('搜索词不能为空');
+            return
+        }
+
+        if(!arr){
+            alert('列表不能为空');
+            return
+        }
+
 
         if(key && arr){
-            arr.forEach(function (val,index,arr) {
-                value = val.replace(key,'<b style="color: #000">'+key+'</b>');
-                if(value){
-                    arr[index] = value;
+            children.forEach(node => {
+                const re = new RegExp(key);
+                if(re.test(node.innerText)){
+                    node.style.color = '#000';
+                    node.style.backgroundColor = 'blue'
                 }
             })
-            applyList(arr,par);
         }
-        else {
-            if(!key){
-                alert('搜索词不能为空');
-            }
-            if(!arr){
-                alert('列表不能为空');
-            }
-        }
-
 
     }
 
