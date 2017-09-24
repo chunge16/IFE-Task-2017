@@ -57,10 +57,13 @@
 
             }
 
-            //随机10-100
-            function RandomNum() {
-                return Math.floor(Math.random()*(100-10+1)+10);
+            //随机x~y
+            function RandomNum(lowerValue,upperValue) {
+                let choices = upperValue - lowerValue + 1;
+                return Math.floor(Math.random() * choices + lowerValue)
+
             }
+
 
             //冒泡算法
             function Bubble(elements1,elements2) {
@@ -152,14 +155,15 @@
             //select remove
             par.addEventListener('click',function (e) {
                 console.log(e);
-                if(e.target.nodeName == 'LI'){
+                if(e.target.nodeName === 'LI'){
                     remove(par,e.target);
                 }
             })
 
+
             //冒泡排序
             document.querySelector('.sort').onclick = function () {
-                var arr = par.children,
+                var arr = Array.from(par.children),
                     i = arr.length - 1,
                     j = 0,
                     timer = '';
@@ -169,13 +173,13 @@
                             clearInterval(timer);
                         }
                         //最外层循环
-
-                        if(i == j){
+                        if(i === j){
                             --i;
                             j = 0;
                         }
                         if(arr[j].offsetHeight > arr[j+1].offsetHeight){
                             Bubble(arr[j],arr[j+1]);
+//                            par.insertBefore(arr[j],arr[j+1]);
                         }
                         ++j;
                     },80)
@@ -183,9 +187,6 @@
                 else {
                     alert('呵呵，数据都没有！！！');
                 }
-
-
-
 
             }
 
@@ -197,7 +198,7 @@
                 par.innerHTML = '';
                 for(var i = 0; i < 50; i++){
                     child = document.createElement('li');
-                    value = RandomNum();
+                    value = RandomNum(10,100);
                     child.innerHTML = value;
                     child.style.height = value + 'px';
                     par.appendChild(child);
