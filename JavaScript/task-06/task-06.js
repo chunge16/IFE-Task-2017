@@ -47,12 +47,10 @@ window.onload = function () {
     }
 
     // 清空元素和聚焦
-
     function reset (input) {
         input.value = '';
         input.focus()
     }
-
 
     //left insert
     document.querySelector('.leftInsert').onclick = function () {
@@ -163,5 +161,4 @@ window.onload = function () {
         }
 
     }
-
 }

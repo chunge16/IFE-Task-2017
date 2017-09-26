@@ -18,6 +18,9 @@ window.onload = function () {
         if(hasClass(el,csName)){
             el.className = el.className.replace(re,'');
         }
+
+        // 另外一种思路
+
     }
 
     //class是否重复
@@ -41,7 +44,8 @@ window.onload = function () {
     //验证格式和长度
     function getStrLength(str) {
         let enlen = 0,
-            zhlen = 0;
+            zhlen = 0;         // 中文占2位
+
         for(let char of str){
             if(isASCII(char)){
                 enlen++;
@@ -65,6 +69,14 @@ window.onload = function () {
             addClass(obj,'has-error');
         }
     }
+    // 检查是否为空
+    function isEmpty(value) {
+        // 为空返回true
+        if(!value.trim()){
+            return true
+        }
+        return false
+    }
 
 
     function init() {
@@ -77,7 +89,8 @@ window.onload = function () {
             const minLen = 4,
                   maxLen = 16;
 
-            if(strLength === 0 || value === null || value === ''){
+            // 检查是否为空
+            if(isEmpty(value)){
 
                 // removeClass(form,'has-success');
                 // addClass(form,'has-error');
@@ -89,21 +102,15 @@ window.onload = function () {
 
                 hint.innerText = '输入不能为空！';
             }
-            else if(strLength < minLen){
+            // 检查字符长度
+            else if((strLength < minLen) || (strLength > maxLen)){
 
                 // removeClass(form,'has-success');
                 // addClass(form,'has-error');
                 verifyStyle(form,false);
-                hint.innerText = '字符长度不能小于4！';
+                hint.innerText = '请检查字符长度';
             }
-            else if(strLength > maxLen){
-
-                // removeClass(form,'has-success');
-                // addClass(form,'has-error');
-                verifyStyle(form,false);
-                hint.innerText = '字符长度不能大于16！';
-
-            }
+            // 符合标准
             else {
                 // removeClass(form,'has-error');
                 // addClass(form,'has-success');
