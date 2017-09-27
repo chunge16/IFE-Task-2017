@@ -4,6 +4,48 @@
 
 window.onload = function () {
 
+    // 元素添加class
+    function addClass(el,csName) {
+        if(!hasClass(el,csName)){
+            el.className += ' ' + csName;
+        }
+    }
+
+    // 元素删除class
+    function removeClass(el,csName) {
+        const re = new RegExp('(\\s|^)'+csName+'(\\s|$)');
+        if(hasClass(el,csName)){
+            // el.className = el.className.replace(re,'');
+            // 另外一种删除class的方法
+            let classList = el.className.split(' ').filter(_class => {
+                return csName !== _class
+            })
+            el.className = classList.join(' ')
+        }
+
+    }
+
+    // class是否重复
+    function hasClass(el,csName) {
+        //公共常量定义
+        const re = new RegExp('(\\s|^)'+csName+'(\\s|$)');
+
+        if(el.className.match(re)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    // 替换类名
+    function replaceClass(el,newClass,oldClass) {
+        // 先删除类名，再添加
+        removeClass(el,oldClass)
+        addClass(el,newClass)
+        
+    }
+
     function createOption (value, text) {
         let option = document.createElement('option');
         option.value = value;
@@ -11,7 +53,6 @@ window.onload = function () {
         return option
     }
 
-    
     function init() {
 
         const Students = document.querySelectorAll('input[type=radio]'),
@@ -34,18 +75,24 @@ window.onload = function () {
 
         let item = 'inStudent';
 
-        Array.from(Students).forEach((input) => {
+        Array.from(Students).forEach(input => {
 
             //箭头函数的使用？？
             input.onclick = function () {
-                console.log(this.value);
                 let value = this.value;
 
                 if(value === item){
                     return
                 }
-                tar[value].style.display = 'block';
-                tar[item].style.display = 'none';
+                // tar[value].style.display = 'block';
+                // tar[item].style.display = 'none';
+                // 修改样式，应该多用class
+                // removeClass(tar[item],'display-black')
+                // addClass(tar[item],'display-none')
+                // removeClass(tar[value],'display-none')
+                // addClass(tar[value],'display-black')
+                replaceClass(tar[item],'display-none','display-black')
+                replaceClass(tar[value],'display-black','display-none')
                 item = value;
             }
 
@@ -56,19 +103,22 @@ window.onload = function () {
         city.oninput = function () {
             const value = city.value,
                   university = document.getElementsByClassName('school')[0];
-           // 清空所有选项
-            university.innerHTML = '';
+                  university_item = university.getElementsByTagName('option');
+            // 清空所有选项
+            //  university.innerHTML = '';
 
-            //调用selectObject.option来清空
-            // university.options.length = 0;
-
+            // 应该避免过多操作DOM,所以直接修改选项的文本
             if(value){
-                schools[value].forEach(function (val,index) {
-                    university.appendChild(createOption(index,val));
+                schools[value].forEach((val,index) => {
+                    // university.appendChild(createOption(index,val));
+                    /*
+                    innerHTML是符合W3C标准的属性，而innerText只适用于IE浏览器，因此，
+                     尽可能地去使用innerHTML，而少用innerText
+                     */
+                    university_item[index].innerHTML = val;
                 })
             }
         }
-
 
 
     }

@@ -3,22 +3,28 @@
  */
 window.onload = function () {
 
-    //元素添加class
+    // 元素添加class
     function addClass(el,csName) {
         if(!hasClass(el,csName)){
             el.className += ' ' + csName;
         }
     }
 
-    //元素删除class
+    // 元素删除class
     function removeClass(el,csName) {
         const re = new RegExp('(\\s|^)'+csName+'(\\s|$)');
         if(hasClass(el,csName)){
-            el.className = el.className.replace(re,'');
+            // el.className = el.className.replace(re,'');
+            // 另外一种删除class的方法
+            let classList = el.className.split(' ').filter(_class => {
+                return csName !== _class
+            })
+            el.className = classList.join(' ')
         }
+
     }
 
-    //class是否重复
+    // class是否重复
     function hasClass(el,csName) {
         //公共常量定义
         const re = new RegExp('(\\s|^)'+csName+'(\\s|$)');
@@ -31,12 +37,12 @@ window.onload = function () {
         }
     }
 
-    //是否是ASCII
+    // 是否是ASCII
     function isASCII(char) {
         return char.codePointAt(0) <= 0xFF;
     }
 
-    //验证名称格式和长度
+    // 验证名称格式和长度
     function getStrLength(str) {
         let enlen = 0,
             zhlen = 0;
@@ -51,7 +57,7 @@ window.onload = function () {
         return enlen + zhlen*2;
     }
 
-    //验证样式变化
+    // 验证样式变化
     function verifyStyle(obj,isok) {
 
         if(isok){
@@ -64,15 +70,29 @@ window.onload = function () {
         }
     }
 
-    //获得焦点
+    // 检查是否为空
+    function isEmpty(value) {
+        // 为空返回true
+        if(!value.trim()){
+            return true
+        }
+        return false
+    }
+
+    // 获得焦点
     function getFocus (e) {
         removeClass(e.parentElement,'has-success');
         removeClass(e.parentElement,'has-error');
         if(e){
-            e.parentElement.nextElementSibling.style.display = 'block';
+            // e.parentElement.nextElementSibling.style.display = 'block';
+            // 避免过多操作DOM，应该是用class去改变样式，而不是直接修改单个样式属性
+            addClass(e.parentElement.nextElementSibling,'display-black')
         }
 
     }
+    
+
+    
 
     function init() {
         let name = document.getElementById('name'),
@@ -109,22 +129,18 @@ window.onload = function () {
             const minLen = 4,
                 maxLen = 16;
 
-            if(strLength === 0 || value === null || value === ''){
+            if(isEmpty(value)){
                 verifyStyle(nameHint.parentElement,false);
                 //HTML DOM classList 属性 支持添加class和删除class，但是注意兼容性IE10以上
                 // form.classList.add('has-error');
                 // form.classList.remove('has-success');
                 nameHint.innerText = '输入不能为空！';
             }
-            else if(strLength < minLen){
+            else if(strLength < minLen || strLength > maxLen){
                 verifyStyle(nameHint.parentElement,false);
-                nameHint.innerText = '字符长度不能小于4！';
+                nameHint.innerText = '字符长度错误！';
             }
-            else if(strLength > maxLen){
-                verifyStyle(nameHint.parentElement,false);
-                nameHint.innerText = '字符长度不能大于16！';
 
-            }
             else {
                 verifyStyle(nameHint.parentElement,true);
                 nameHint.innerText = '恭喜你，输入格式正确！';
@@ -135,7 +151,7 @@ window.onload = function () {
         Password.onblur = function () {
             let value = Password.value.trim();
             
-            if(!value){
+            if(isEmpty(value)){
                 verifyStyle(PasswordHint.parentElement,false);
                 PasswordHint.innerText = '输入不能为空';
             }
@@ -154,7 +170,7 @@ window.onload = function () {
             let value2 = rePassword.value.trim(),
                 value = Password.value.trim();
 
-            if(!value2){
+            if(isEmpty(value)){
                 verifyStyle(rePasswordHint.parentElement,false);
                 rePasswordHint.innerText = '输入不能为空';
             }
@@ -176,7 +192,7 @@ window.onload = function () {
         email.onblur = function () {
             let value = email.value;
 
-            if(!value){
+            if(isEmpty(value)){
                 verifyStyle(emailHint.parentElement,false);
                 emailHint.innerText = '输入不能为空';
             }
@@ -194,7 +210,7 @@ window.onload = function () {
         phone.onblur = function () {
             let value = phone.value;
 
-            if(!value){
+            if(isEmpty(value)){
                 verifyStyle(phoneHint.parentElement,false);
                 phoneHint.innerText = '输入不能为空';
             }
@@ -221,7 +237,7 @@ window.onload = function () {
             phone.onblur();
 
             form = Array.from(form);
-            form.forEach(function (val) {
+            form.forEach(val =>{
                 if(hasClass(val,'has-error')){
                     isok = false;
                 }
@@ -237,9 +253,6 @@ window.onload = function () {
 
 
         }
-
-
-
 
 
 
