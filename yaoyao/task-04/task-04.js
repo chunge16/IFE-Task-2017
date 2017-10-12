@@ -147,7 +147,6 @@ window.onload = function () {
 
         }
 
-
         // 添加棋盘
         let checker = checkerboard(10);
         table.innerHTML = '';
@@ -157,9 +156,6 @@ window.onload = function () {
         table.appendChild(checker[0]);
         table.appendChild(checker[1]);
         table.appendChild(box_guide);
-
-        // javascript的style属性只能获取内联样式,无法获取最终的样式信息
-
 
         btn.onclick = function () {
             let selectValue = select.value,
@@ -187,7 +183,6 @@ window.onload = function () {
             else {
                 alert('请选择指令')
             }
-
 
         }
     }
