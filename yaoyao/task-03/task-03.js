@@ -99,7 +99,7 @@ window.onload = function () {
         })
 
 
-
+        // oninput,onpropertychange,onchange的用法和区别
         city.oninput = function () {
             const value = city.value,
                   university = document.getElementsByClassName('school')[0];
@@ -123,6 +123,5 @@ window.onload = function () {
 
     }
     init();
-
 
 }
