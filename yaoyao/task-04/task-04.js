@@ -66,7 +66,8 @@ window.onload = function () {
 
         // fn GO
         function fnGo(node, direction) {
-            direction = Number(direction);
+            // 取绝对值
+            direction = Math.abs(Number(direction));
             const num = 40;
             // 获取节点相对父元素的偏移量
             var topValue = Number(node.offsetTop),
@@ -82,13 +83,17 @@ window.onload = function () {
                 return
             }
 
-            // 角度可能为负值 270deg == -90deg
-            if (direction < 0) {
-                direction += 360;
+            // 重置角度，确定方向
+            if(direction > 360){
+                let ratio = direction / 360;
+                while (ratio >= 1){
+                    ratio -= 1
+                }
+                direction = ratio * 360;
+
             }
             // 四个方向判断, 通过transform: rotate(90deg)的角度判断
             switch (direction) {
-                // top
                 case 0:
                     if(topValue === 40){
                         node.style.top = '40px';
@@ -130,18 +135,13 @@ window.onload = function () {
 
         }
 
-        // 改变方向
+        // fn TUN
         function changeDirection(node, value) {
             let rotateValue = Number(getRotateValue(box_guide));
             if (!node) {
                 return
             }
-            if(rotateValue > 360){
-                rotateValue -= 360;
-            }
-            if(rotateValue < -360){
-                rotateValue += 360
-            }
+
             node.style.transform = `rotate(${rotateValue + value}deg)`
 
 
@@ -188,6 +188,9 @@ window.onload = function () {
     }
 
     init()
+
+
+
 
 
 }
