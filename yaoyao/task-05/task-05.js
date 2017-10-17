@@ -148,6 +148,20 @@ window.onload = function () {
 
             node.style.transform = `rotate(${rotateValue + value}deg)`
 
+        }
+        // 固定四个方向转向
+        function fnTurn(node,value) {
+            let rotateValue = Number(getRotateValue(box_guide));
+
+            if (!node){
+                return
+            }
+            if(!value && value !== 0){
+                return
+            }
+            if(rotateValue !== value){
+                node.style.transform = `rotate(${value}deg)`
+            }
 
         }
 
@@ -163,7 +177,7 @@ window.onload = function () {
 
         btn.onclick = function () {
             let selectValue = select.value,
-                rotateValue = getRotateValue(box_guide);
+                rotateValue = Number(getRotateValue(box_guide));
             if (selectValue) {
                 switch (selectValue) {
                     case 'GO':
@@ -180,6 +194,52 @@ window.onload = function () {
                         break;
                     case 'TRA LEF':
                         fnGo(box_guide,270);
+                        break;
+                    case 'TRA TOP':
+                        fnGo(box_guide,0);
+                        break;
+                    case 'TRA RIG':
+                        fnGo(box_guide,90);
+                        break;
+                    case 'TRA BOT':
+                        fnGo(box_guide,180);
+                        break;
+                    case 'MOV LEF':
+                        // 方向转向屏幕左侧，并向屏幕的左侧移动一格
+                        // 可以利用setInterval循环执行changeDirection
+                        if(rotateValue !== -90){
+                            let timer = setInterval(function () {
+                                changeDirection(box_guide,-90)
+                                let newRotateValue = Number(getRotateValue(box_guide));
+                                if(newRotateValue === -90){
+                                    clearInterval(timer)
+                                }
+                            },50)
+                        }
+
+                        // fnTurn(box_guide,-90);
+                        setTimeout(function () {
+                            fnGo(box_guide,270);
+                        },1001);
+                        break;
+                    case 'MOV TOP':
+                        fnTurn(box_guide,0);
+                        setTimeout(function () {
+                            fnGo(box_guide,0);
+                        },1001)
+                        break;
+                    case 'MOV RIG':
+                        fnTurn(box_guide,90);
+                        setTimeout(function () {
+                            fnGo(box_guide,90);
+                        },1001)
+                        break;
+                    case 'MOV BOT':
+                        fnTurn(box_guide,180);
+                        setTimeout(function () {
+                            fnGo(box_guide,180);
+                        },1001)
+                        break;
                     default:
                         return
                 }
